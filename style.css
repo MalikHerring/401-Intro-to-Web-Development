@@ -1,3 +1,17 @@
+body{
+    min-width:810px;
+    width: auto !important;
+    width: 810px;
+    min-height: 750px;
+    height: auto !important;
+    height: 750px;
+    padding:5px;
+    border-style:solid;
+    border-width: 5px;
+    border-color: gray;
+    position:relative
+}
+/*
 #content {
     min-width:810px;
     min-height: 750px;
@@ -7,6 +21,7 @@
     border-color: gray;
     position:relative
 }
+*/
 
 #logo {
     float: right;
@@ -48,6 +63,12 @@ div#sidebar{
     border-width: 2px;
     border-color: black;
     float: right;
+}
+
+div#footer{
+    min-width:810px;
+    
+    
 }
 
 p {
