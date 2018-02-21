@@ -1,10 +1,16 @@
 body {
     padding:5px;
+    border-style:solid;
+    border-width: 5px;
+    border-color: gray;
 }
 
 div#header {
-    height:50px;
+    height:100px;
     min-width:500px;
+    border-style: dotted;
+    border-width: 2px;
+    border-color: black;    
 }
 
 div#menubar {
@@ -15,6 +21,9 @@ div#menubar {
 div#mainBox{
     min-width: 500px;
     min-height: 500px;
+    border-style: dotted;
+    border-width: 2px;
+    border-color: black;  
 }
 
 p {
@@ -22,19 +31,39 @@ p {
 }
 
 .text {
-    font-size:12px;
+    font-size:14px;
 }
 
 #menuText {
-    font-size:16px;
+    font-size:18px;
 }
 
 #footer-text {
     text-align:center;
-    font-size:8px;
+    font-size:12px;
 }
 
-ul#horizontal-list li{
-    display: inline;
+ul#horizontal-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+ul#horizontal-menu li{
+    float: left;
+}
+
+ul#horizontal-menu li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover{
+    background-color: #111;
 }
 
