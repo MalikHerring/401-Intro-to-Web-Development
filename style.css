@@ -1,0 +1,40 @@
+body {
+    padding:5px;
+}
+
+div#header {
+    height:50px;
+    min-width:500px;
+}
+
+div#menubar {
+    min-width: 500px;
+    padding-bottom: 10px;
+}
+
+div#mainBox{
+    min-width: 500px;
+    min-height: 500px;
+}
+
+p {
+    font-family:"Lucida Console", "Courier New", monospace;
+}
+
+.text {
+    font-size:12px;
+}
+
+#menuText {
+    font-size:16px;
+}
+
+#footer-text {
+    text-align:center;
+    font-size:8px;
+}
+
+ul#horizontal-list li{
+    display: inline;
+}
+
