@@ -5,10 +5,21 @@ body {
     border-color: gray;
 }
 
+#logo {
+    float: right;
+    height: 20px;
+    width: 100px;
+    padding-right: 10px;
+    padding-top: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: gray;
+}
+
 div#header {
     height:100px;
-    min-width:500px;
-    border-style: dotted;
+    min-width:800px;
+    border-style: dashed;
     border-width: 2px;
     border-color: black;    
 }
@@ -19,18 +30,25 @@ div#menubar {
 }
 
 div#mainBox{
-    min-width: 500px;
+    min-width: 600px;
     min-height: 500px;
-    border-style: dotted;
+    border-style: dashed;
     border-width: 2px;
-    border-color: black;  
+    border-color: black; 
+    float: left;
+}
+
+div#sidebar{
+    width: 200px;
+    min-height: 500px;
+    border-style: dashed;
+    border-width: 2px;
+    border-color: black;
+    float: right;
 }
 
 p {
-    font-family:"Lucida Console", "Courier New", monospace;
-}
-
-.text {
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size:14px;
 }
 
