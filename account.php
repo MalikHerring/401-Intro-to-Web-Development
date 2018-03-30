@@ -4,6 +4,7 @@
     $dao = new Dao();
     $heading = $dao->createHeading();
 ?>
+
 <html>
     <head>
         <title>Timeline Scheduler</title>
