@@ -39,5 +39,6 @@ class Dao {
                 <li><a href=\"phpInfo.php\" alt=\"PHP Info\">PHP Info</a></li>
             </ul>
 	</div>";
-  }	
-?>
+  }
+}
+
