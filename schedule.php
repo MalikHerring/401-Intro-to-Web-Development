@@ -12,7 +12,7 @@
     </head>
     <body>
     <div id = content>
-	<?php echo $heading ?>
+	<?php echo $heading; ?>
         <div id="mainBox">
             <p> This will be where we find appointments </p>
         </div>
