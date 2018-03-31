@@ -59,8 +59,9 @@ div#mainBox{
 }
 
 div#sidebar{
+    text-align:right;
     min-width: 200px;
-    width: 30%;
+    width: 30velvel%;
     min-height: 500px;
     border-style: dashed;
     border-width: 2px;
