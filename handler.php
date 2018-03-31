@@ -50,11 +50,15 @@
     $_SESSION['validity'] = "valid";
     $_SESSION['messages'] = array("Thank you for creating an account");
     
-    #$user = $_POST["user"];
+    $username = $_POST["username"];
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+    
     $dao->saveUser($username, $email, $password);
     
     header("Location: index.php");
     exit;
+?>
     
 
     

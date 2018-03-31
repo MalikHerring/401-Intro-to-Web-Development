@@ -52,7 +52,7 @@
                 <div> Email: <br /><input value="<?php echo isset($presets['email']) ? $presets['email'] : ''; ?>" type="text" id="email" name="email"></div>
                 <div> Password: <br /><input type="password" id="password" name="password"></div>
                 <div> Confirm Password: <br /><input type="password" id="confirmPassword" name="confirmPassword"></div>
-                <div><input type="submit" value="Create User"></div>
+                <div><input type="submit" value="Create Account"></div>
             </form>
         </div>
     </div>
