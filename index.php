@@ -17,9 +17,27 @@
             <p> This will be where we find appointments </p>
         </div>
         <div id="sidebar">
+        <?php
+            if (isset($_SESSION['Messages'])){
+                $validity = $_SESSION['validity'];
+                foreach($_SESSION['messages'] as $message){
+                    echo "<div class='message $validity'>$message</div>";
+                }
+            }
+        
+            $presets= array();
+        
+            if (isset($_SESSION['presets'])){
+                $presets= array_shift($_SESSION['presets']);
+            }
+            
+            unset($_SESSION['presets']);
+            unset($_SESSION['messages']);
+            unset($_SESSION['messages']);
+        ?>        
             <form action="handler.php" method="POST" enctype="multipart/form-data">
-                <div> Username: <input type="text" id="username" name="username"></div>
-                <div> Email: <input type="text" id="email" name="email"></div>
+                <div> Username: <input value="<?php echo isset($presets['username']) ? ''; ?>" type="text" id="username" name="username"></div>
+                <div> Email: <input value="<?php echo isset($presets['email']) ? ''; ?>" type="text" id="email" name="email"></div>
                 <div> Password: <input type="password" id="password" name="password"></div>
                 <div> Confirm Password: <input type="password" id="confirmPass" name="confirmPassword"></div>
                 <div><input type="submit" value="Create User"></div>

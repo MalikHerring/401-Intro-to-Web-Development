@@ -32,10 +32,10 @@
     if(empty($password)){
         $messages[] = "Please provide an email";
         $valid = false;
-    } elseif (strlen($password) < 6)
+    } elseif (strlen($password) < 6){
         $messages[] = "Please provide a password longer than 6 characters";
         $valid = false;
-    } elseif (!($password == $confirmPass))
+    } elseif (!($password == $confirmPass)){
         $messages[] = "Passwords do not match";
         $valid = false;
     }

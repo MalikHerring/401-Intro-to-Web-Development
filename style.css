@@ -1,3 +1,14 @@
+.message {
+  color:#FFFFFF;
+  padding: 5 5;
+  margin: 2 0;
+  width: 50%;
+}
+
+.invalid {
+  background-color:#AF0000;
+}
+
 #content {
     min-width:810px;
     min-height: 750px;
@@ -35,6 +46,7 @@ div#menubar {
 
 div#mainBox{
     min-width: 600px;
+    max-width: 70%;
     min-height: 500px;
     border-style: dashed;
     border-width: 2px;
@@ -43,7 +55,8 @@ div#mainBox{
 }
 
 div#sidebar{
-    width: 200px;
+    min-width: 200px;
+    max-width: 30%;
     min-height: 500px;
     border-style: dashed;
     border-width: 2px;
