@@ -14,6 +14,20 @@
     <body>
     <div id = content>
 	<?php echo $heading; ?>
+        <div id="mainBox">
+            <table>
+            <?php
+                echo "<tr><th>Username</th><th>Email</th><th>Password</th><th>Access</th><th>Account ID</th><tr>";
+                foreach($users as $user) {
+                    print   "<tr><td>" . htmlspecialchars($user['username']) . "</td>" .
+                            "<td>" . htmlspecialchars($user['email']) . "</td>" .
+                            "<td>" . htmlspecialchars($user['password']) . "</td>" .
+                            "<td>" . $user['access'] . "</td>" .
+                            "<td>" . $user['accountID'] . "</td></tr>";
+                }
+            ?>
+            </table>
+        </div>
         <div id="sidebar">
         <?php
             if (isset($_SESSION['messages'])){
@@ -40,20 +54,6 @@
                 <div> Confirm Password: <br /><input type="password" id="confirmPassword" name="confirmPassword"></div>
                 <div><input type="submit" value="Create Account"></div>
             </form>
-        </div>	
-        <div id="mainBox">
-            <table>
-            <?php
-                echo "<tr><th>Username</th><th>Email</th><th>Password</th><th>Access</th><th>Account ID</th><tr>";
-                foreach($users as $user) {
-                    print   "<tr><td>" . htmlspecialchars($user['username']) . "</td>" .
-                            "<td>" . htmlspecialchars($user['email']) . "</td>" .
-                            "<td>" . htmlspecialchars($user['password']) . "</td>" .
-                            "<td>" . $user['access'] . "</td>" .
-                            "<td>" . $user['accountID'] . "</td></tr>";
-                }
-            ?>
-            </table>
         </div>
     </div>
 	<div id="footer">
