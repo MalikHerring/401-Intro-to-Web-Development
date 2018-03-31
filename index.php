@@ -15,6 +15,7 @@
     <div id = content>
 	<?php echo $heading; ?>
         <div id="mainBox">
+            <table>
             <?php
                 echo "<tr><th>Username</th><th>Email</th><th>Password</th><th>Access</th><th>Account ID</th><tr>";
                 foreach($users as $user) {
@@ -25,6 +26,7 @@
                             "<td>" . $user['accountID'] . "</td>";
                 }
             ?>
+            </table>
         </div>
         <div id="sidebar">
             <form action="handler.php" method="POST" enctype="multipart/form-data">
