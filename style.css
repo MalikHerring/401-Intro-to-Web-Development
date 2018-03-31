@@ -50,7 +50,7 @@ div#menubar {
 
 div#mainBox{
     min-width: 600px;
-    width: 65%;
+    width: 69%;
     min-height: 500px;
     border-style: dashed;
     border-width: 2px;
@@ -61,7 +61,7 @@ div#mainBox{
 div#sidebar{
     text-align:right;
     min-width: 200px;
-    width: 30velvel%;
+    width: 30%;
     min-height: 500px;
     border-style: dashed;
     border-width: 2px;
