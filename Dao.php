@@ -50,6 +50,18 @@ class Dao {
     $this->logger->logDebug(__FUNCTION__ . " " . print_r($results,1));
     return $results;
   }
+  
+  public function saveUsers($username, $email, $password){
+    $conn = $this->getConnection();
+    $query = $conn->prepare("INSERT INTO user (username, email, password, access) VALUES (:username, :email, :password, :access");
+    $query->bindParam(':username',$username);
+    $query->bindParam(':email', $email);
+    $query->bindParam(':password', $password);
+    $query->bindParam(':access', 0);
+    $this->logger->logDebug(__FUNCTION__ . " username=[{$username}] email=[{$email}]");
+    $query->execute();
+  }
+  
     
 }
 

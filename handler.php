@@ -6,6 +6,7 @@
     $username = $_POST["username"];
     $email = $_POST["email"];
     $password = $_POST["password"];
+    $confirmPass = $_POST["confirmPass"];
     
     $_SESSION['presets'] = array($_POST);
     
@@ -31,8 +32,11 @@
     if(empty($password)){
         $messages[] = "Please provide an email";
         $valid = false;
-    } else (strlen($password) < 6)
+    } elseif (strlen($password) < 6)
         $messages[] = "Please provide a password longer than 6 characters";
+        $valid = false;
+    } elseif (!($password == $confirmPass))
+        $messages[] = "Passwords do not match";
         $valid = false;
     }
     
@@ -44,7 +48,7 @@
     }
     
     $_SESSION['validity'] = "valid";
-    $_SESSION['messages'] - array("Thank you for creating an account");
+    $_SESSION['messages'] = array("Thank you for creating an account");
     
     $user = $_POST["user"];
     $dao->saveUser($username, $email, $password);

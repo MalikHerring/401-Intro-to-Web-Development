@@ -7,7 +7,7 @@
 
 <html>
     <head>
-        <title>Timeline Scheduler</title>
+        <title>Goals</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -17,6 +17,8 @@
             <p> This will be where we find appointments </p>
         </div>
         <div id="sidebar">
+            <form action="handler.php" method="POST" enctype="multipart/form-data">
+            <div> Username: <input
             <p> this will display your information once logged in. </p>
         </div>
     </div>
