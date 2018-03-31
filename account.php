@@ -15,6 +15,7 @@
     <div id = content>
 	<?php echo $heading; ?>
         <div id="mainBox">
+            <table>
             <?php
                 echo "<tr><th>Username</th><th>Email</th><th>Password</th><th>Access</th><th>Account ID</th><tr>";
                 foreach($users as $user) {
@@ -22,13 +23,14 @@
                             "<td>" . htmlspecialchars($user['email']) . "</td>" .
                             "<td>" . htmlspecialchars($user['password']) . "</td>" .
                             "<td>" . $user['access'] . "</td>" .
-                            "<td>" . $user['accountID'] . "</td>";
+                            "<td>" . $user['accountID'] . "</td></tr>";
                 }
             ?>
+            </table>
         </div>
         <div id="sidebar">
         <?php
-            if (isset($_SESSION['Messages'])){
+            if (isset($_SESSION['messages'])){
                 $validity = $_SESSION['validity'];
                 foreach($_SESSION['messages'] as $message){
                     echo "<div class='message $validity'>$message</div>";

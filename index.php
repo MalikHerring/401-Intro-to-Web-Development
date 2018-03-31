@@ -23,12 +23,30 @@
                             "<td>" . htmlspecialchars($user['email']) . "</td>" .
                             "<td>" . htmlspecialchars($user['password']) . "</td>" .
                             "<td>" . $user['access'] . "</td>" .
-                            "<td>" . $user['accountID'] . "</td>";
+                            "<td>" . $user['accountID'] . "</td></tr>";
                 }
             ?>
             </table>
         </div>
         <div id="sidebar">
+        <?php
+            if (isset($_SESSION['messages'])){
+                $validity = $_SESSION['validity'];
+                foreach($_SESSION['messages'] as $message){
+                    echo "<div class='message $validity'>$message</div>";
+                }
+            }
+        
+            $presets= array();
+        
+            if (isset($_SESSION['presets'])){
+                $presets= array_shift($_SESSION['presets']);
+            }
+            
+            unset($_SESSION['presets']);
+            unset($_SESSION['messages']);
+            unset($_SESSION['messages']);
+        ?>          
             <form action="handler.php" method="POST" enctype="multipart/form-data">
                 <div> Username: <br/><input type="text" id="username" name="username"></div>
                 <div> Email: <br/><input type="text" id="email" name="email"></div>
