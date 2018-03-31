@@ -48,10 +48,10 @@
             unset($_SESSION['messages']);
         ?>          
             <form action="handler.php" method="POST" enctype="multipart/form-data">
-                <div> Username: <br/><input type="text" id="username" name="username"></div>
-                <div> Email: <br/><input type="text" id="email" name="email"></div>
-                <div> Password: <br/><input type="password" id="password" name="password"></div>
-                <div> Confirm Password:<br/><input type="password" id="confirmPass" name="confirmPassword"></div>
+                <div> Username: <input value="<?php echo isset($presets['username']) ? ''; ?>" type="text" id="username" name="username"></div>
+                <div> Email: <input value="<?php echo isset($presets['email']) ? ''; ?>" type="text" id="email" name="email"></div>
+                <div> Password: <input type="password" id="password" name="password"></div>
+                <div> Confirm Password: <input type="password" id="confirmPass" name="confirmPassword"></div>
                 <div><input type="submit" value="Create User"></div>
             </form>
         </div>
