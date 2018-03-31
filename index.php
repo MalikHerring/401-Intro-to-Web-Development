@@ -51,7 +51,7 @@
                 <div> Username: <br /><input value="<?php echo isset($presets['username']) ? $presets['username'] : ''; ?>" type="text" id="username" name="username"></div>
                 <div> Email: <br /><input value="<?php echo isset($presets['email']) ? $presets['email'] : ''; ?>" type="text" id="email" name="email"></div>
                 <div> Password: <br /><input type="password" id="password" name="password"></div>
-                <div> Confirm Password: <br /><input type="password" id="confirmPass" name="confirmPassword"></div>
+                <div> Confirm Password: <br /><input type="password" id="confirmPassword" name="confirmPassword"></div>
                 <div><input type="submit" value="Create User"></div>
             </form>
         </div>

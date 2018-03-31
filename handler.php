@@ -6,7 +6,7 @@
     $username = $_POST["username"];
     $email = $_POST["email"];
     $password = $_POST["password"];
-    $confirmPass = $_POST["confirmPass"];
+    $confirmPass = $_POST["confirmPassword"];
     
     $_SESSION['presets'] = array($_POST);
     
@@ -35,7 +35,7 @@
     } elseif (strlen($password) < 6){
         $messages[] = "Please provide a password longer than 6 characters";
         $valid = false;
-    } elseif (!($password == $confirmPass)){
+    } elseif (!($password == $confirmPassword)){
         $messages[] = "Passwords do not match";
         $valid = false;
     }
