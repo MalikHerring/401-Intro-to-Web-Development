@@ -3,6 +3,7 @@
     require_once 'Dao.php';
     $dao = new Dao();
     $heading = $dao->createHeading();
+    $users = $dao->getUsers("*");
 ?>
 
 <html>
@@ -14,7 +15,16 @@
     <div id = content>
 	<?php echo $heading; ?>
         <div id="mainBox">
-            <p> This will be where we find appointments </p>
+            <?php
+                echo "<tr><th>Username</th><th>Email</th><th>Password</th><th>Access</th><th>Account ID</th><tr>";
+                foreach($users as $user) {
+                    print   "<tr><td>" . htmlspecialchars($user['username']) . "</td>" .
+                            "<td>" . htmlspecialchars($user['email']) . "</td>" .
+                            "<td>" . htmlspecialchars($user['password']) . "</td>" .
+                            "<td>" . $user['access'] . "</td>" .
+                            "<td>" . $user['accountID'] . "</td>";
+                }
+            ?>
         </div>
         <div id="sidebar">
         <?php
