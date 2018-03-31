@@ -9,6 +9,10 @@
   background-color:#AF0000;
 }
 
+.valid {
+  background-color:#228B22;
+}
+
 #content {
     min-width:810px;
     min-height: 750px;
