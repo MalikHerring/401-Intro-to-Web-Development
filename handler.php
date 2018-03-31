@@ -35,7 +35,7 @@
     } elseif (strlen($password) < 6){
         $messages[] = "Please provide a password longer than 6 characters";
         $valid = false;
-    } elseif (!($password == $confirmPassword)){
+    } elseif (strcmp($password, $confirmPassword) != 0){
         $messages[] = "Passwords do not match";
         $valid = false;
     }
