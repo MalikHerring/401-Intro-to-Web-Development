@@ -3,7 +3,7 @@
     require_once 'Dao.php';
     $dao = new Dao();
     $heading = $dao->createHeading();
-    
+    $users = $dao->getUsers("*");
 ?>
 
 <html>

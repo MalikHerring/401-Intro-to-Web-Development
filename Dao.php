@@ -43,7 +43,7 @@ class Dao {
   
   public function getUsers($queryStr){
     $conn = $this->getConnection();
-    $query = $conn->prepare("select " . $queryStr . " from users");
+    $query = $conn->prepare("select " . $queryStr . " from user");
     $query->setFetchMode(PDO::FETCH_ASSOC);
     $query->execute();
     $results = $query->fetchAll();
