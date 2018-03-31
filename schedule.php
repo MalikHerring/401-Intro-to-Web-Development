@@ -3,11 +3,12 @@
     require_once 'Dao.php';
     $dao = new Dao();
     $heading = $dao->createHeading();
+    $users = $dao->getUsers("*");    
 ?>
 
 <html>
     <head>
-        <title>Timeline Scheduler</title>
+        <title>LifeGoals</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
