@@ -6,7 +6,7 @@
     $username = $_POST["username"];
     $email = $_POST["email"];
     $password = $_POST["password"];
-    $confirmPass = $_POST["confirmPassword"];
+    $confirmPassword = $_POST["confirmPassword"];
     
     $_SESSION['presets'] = array($_POST);
     
