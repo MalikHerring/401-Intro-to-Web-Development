@@ -23,11 +23,12 @@
             <table>
             <?php
                 $users = $dao->getUsers("*");
-                echo "<tr><th>Username</th><th>Email</th><th>Password</th><th>Access</th><th>Account ID</th><tr>";
+                echo    "<tr><th>Username</th><th>Email</th>" . #<th>Password</th>
+                        "<th>Access</th><th>Account ID</th><tr>";
                 foreach($users as $user) {
                     print   "<tr><td>" .    htmlspecialchars($user['username'])     . "</td>" .
                             "<td>" .        htmlspecialchars($user['email'])        . "</td>" .
-                            "<td>" .        htmlspecialchars($user['password'])     . "</td>" .
+                            #"<td>" .        htmlspecialchars($user['password'])     . "</td>" .
                             "<td>" .        $user['access']                         . "</td>" .
                             "<td>" .        $user['accountID']                  . "</td></tr>";
                 }
