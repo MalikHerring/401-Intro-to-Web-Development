@@ -2,9 +2,10 @@
     session_start();
     require_once 'Dao.php';
     $dao = new Dao();
-    $heading = $dao->createHeading();
-    $users = $dao->getUsers("*");
-    $username = $_SESSION['username'];
+    $username;
+    if (isset($_SESSION['username'])){
+        $username = $_SESSION['username'];
+    }
 ?>
 
 <html>
@@ -14,10 +15,14 @@
     </head>
     <body>
     <div id = content>
-	<?php echo $heading; ?>
+	<?php
+            $heading = $dao->createHeading();
+            echo $heading; 
+        ?>
         <div id="mainBox">
             <table>
             <?php
+                $users = $dao->getUsers("*");
                 if (!empty($dao->checkAccess($username))){
                     echo "<tr><th>Username</th><th>Email</th><th>Exp.</th><th>Current Goals</th><th>Completed Goals</th><th>Account ID</th></tr>";
                     foreach($users as $user) {
