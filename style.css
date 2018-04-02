@@ -75,8 +75,8 @@ div#footer{
     
 }
 
+
 p {
-    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size:14px;
 }
 
@@ -115,6 +115,11 @@ li a:hover{
 }
 
 body{
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
     min-width: 1000px;
+}
+
+table, th, td {
+   border: 1px solid black;
 }
 
