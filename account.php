@@ -9,7 +9,7 @@
 
 <html>
     <head>
-        <title>Timeline Scheduler</title>
+        <title>LifeGoals</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>

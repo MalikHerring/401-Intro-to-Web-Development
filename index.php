@@ -29,7 +29,7 @@
             </table>
         </div>
         <div id="sidebar">       
-            <form action="handler.php" method="POST" enctype="multipart/form-data">
+            <form action="createHandler.php" method="POST" enctype="multipart/form-data">
                 <div> Username: <input value="<?php echo isset($presets['username']) ? ''; ?>" type="text" id="username" name="username"></div>
                 <div> Email: <input value="<?php echo isset($presets['email']) ? ''; ?>" type="text" id="email" name="email"></div>
                 <div> Password: <input type="password" id="password" name="password"></div>
