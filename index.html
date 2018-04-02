@@ -2,8 +2,6 @@
     session_start();
     require_once 'Dao.php';
     $dao = new Dao();
-    $heading = $dao->createHeading();
-    $users = $dao->getUsers("*");
 ?>
 
 <html>
@@ -13,10 +11,13 @@
     </head>
     <body>
     <div id = content>
-	<?php echo $heading; ?>
+	<?php     
+            $heading = $dao->createHeading();
+            echo $heading; ?>
         <div id="mainBox">
             <table>
             <?php
+                $users = $dao->getUsers("*");
                 echo "<tr><th>Username</th><th>Email</th><th>Password</th><th>Access</th><th>Account ID</th><tr>";
                 foreach($users as $user) {
                     print   "<tr><td>" . htmlspecialchars($user['username']) . "</td>" .
