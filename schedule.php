@@ -3,8 +3,10 @@
     require_once 'Dao.php';
     $dao = new Dao();
     $heading = $dao->createHeading();
-    $users = $dao->getUsers("*");  
-    $username = $_SESSION['username'];
+    $username;
+    if (isset($_SESSION['username'])){
+        $username = $_SESSION['username'];
+    }
 ?>
 
 <html>
@@ -18,22 +20,32 @@
         <div id="mainBox">
             <p> Will display Day, Week, Month, Year schedule </p>
         </div>
-        <div id="sidebar">
-            <?php if(isset($username)){ 
-            echo 
-                "<div>" .
-                    "<h1>Welcome back, " . $username . "</h1>" .
-                "</div>";
-            } else { 
-            echo    
-                "<form action=\"createHandler.php\" method=\"POST\" enctype=\"multipart/form-data\">
-                    <div> Username: <br/><input type=\"text\" id=\"username\" name=\"username\"></div>
-                    <div> Email: <br/><input type=\"text\" id=\"email\" name=\"email\"></div>
-                    <div> Password: <br/><input type=\"password\" id=\"password\" name=\"password\"></div>
-                    <div> Confirm Password:<br/><input type=\"password\" id=\"confirmPass\" name=\"confirmPassword\"></div>
-                    <div><input type=\"submit\" value=\"Create User\"></div>
-                </form>";
-            ?>
+        <div id="sidebar">       
+            <form action="createHandler.php" method="POST" enctype="multipart/form-data">
+                <div> Username: <input value="<?php echo isset($presets['username']) ? $presets['username'] : ''; ?>" type="text" id="username" name="username"></div>
+                <div> Email: <input value="<?php echo isset($presets['email']) ? $presets['email'] : ''; ?>" type="text" id="email" name="email"></div>
+                <div> Password: <input type="password" id="password" name="password"></div>
+                <div> Confirm Password: <input type="password" id="confirmPass" name="confirmPassword"></div>
+                <div><input type="submit" value="Create User"></div>
+            </form>
+        <?php
+            if (isset($_SESSION['messages'])){
+                $validity = $_SESSION['validity'];
+                foreach($_SESSION['messages'] as $message){
+                    echo "<div class='message $validity'>$message</div>";
+                }
+            }
+        
+            $presets= array();
+        
+            if (isset($_SESSION['presets'])){
+                $presets= array_shift($_SESSION['presets']);
+            }
+            
+            unset($_SESSION['presets']);
+            unset($_SESSION['messages']);
+            unset($_SESSION['messages']);
+        ?>             
         </div>
     </div>
 	<div id="footer">

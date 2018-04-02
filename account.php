@@ -22,9 +22,9 @@
         <div id="mainBox">
             <table>
             <?php
-                $users = $dao->getUsers("*");
                 if (!empty($dao->checkAccess($username))){
                     echo "<tr><th>Username</th><th>Email</th><th>Exp.</th><th>Current Goals</th><th>Completed Goals</th><th>Account ID</th></tr>";
+                    $users = $dao->getUsers("*");
                     foreach($users as $user) {
                         print   "<tr><td>" . htmlspecialchars($user['username']) . "</td>" .
                                 "<td>" . htmlspecialchars($user['email']) . "</td>" .

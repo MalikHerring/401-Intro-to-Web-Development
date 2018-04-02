@@ -20,10 +20,12 @@
             echo $heading; 
         ?>
         <div id="mainBox">
+            <h2> Current Account List </h2>
             <table>
             <?php
                 $users = $dao->getUsers("*");
-                echo    "<tr><th>Username</th><th>Email</th>" . #<th>Password</th>
+                echo    "<tr><th>Username</th><th>Email</th>" . 
+                        #<th>Password</th> .
                         "<th>Access</th><th>Account ID</th><tr>";
                 foreach($users as $user) {
                     print   "<tr><td>" .    htmlspecialchars($user['username'])     . "</td>" .

@@ -114,3 +114,7 @@ li a:hover{
     background-color: #111;
 }
 
+body{
+    min-width: 1000px;
+}
+
