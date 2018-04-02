@@ -19,7 +19,7 @@
             <p> Will display Day, Week, Month, Year schedule </p>
         </div>
         <div id="sidebar">
-            <?php if(isset($username){ 
+            <?php if(isset($username)){ 
             echo 
                 "<div>" .
                     "<h1>Welcome back, " . $username . "</h1>" .
