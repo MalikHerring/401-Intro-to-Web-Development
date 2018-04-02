@@ -13,26 +13,27 @@
     <div id = content>
 	<?php     
             $heading = $dao->createHeading();
-            echo $heading; ?>
+            echo $heading; 
+        ?>
         <div id="mainBox">
             <table>
             <?php
                 $users = $dao->getUsers("*");
                 echo "<tr><th>Username</th><th>Email</th><th>Password</th><th>Access</th><th>Account ID</th><tr>";
                 foreach($users as $user) {
-                    print   "<tr><td>" . htmlspecialchars($user['username']) . "</td>" .
-                            "<td>" . htmlspecialchars($user['email']) . "</td>" .
-                            "<td>" . htmlspecialchars($user['password']) . "</td>" .
-                            "<td>" . $user['access'] . "</td>" .
-                            "<td>" . $user['accountID'] . "</td></tr>";
+                    print   "<tr><td>" .    htmlspecialchars($user['username'])     . "</td>" .
+                            "<td>" .        htmlspecialchars($user['email'])        . "</td>" .
+                            "<td>" .        htmlspecialchars($user['password'])     . "</td>" .
+                            "<td>" .        $user['access']                         . "</td>" .
+                            "<td>" .        $user['accountID']                  . "</td></tr>";
                 }
             ?>
             </table>
         </div>
         <div id="sidebar">       
             <form action="createHandler.php" method="POST" enctype="multipart/form-data">
-                <div> Username: <input value="<?php echo isset($presets['username']) ? ''; ?>" type="text" id="username" name="username"></div>
-                <div> Email: <input value="<?php echo isset($presets['email']) ? ''; ?>" type="text" id="email" name="email"></div>
+                <div> Username: <input value="<?php echo isset($presets['username']) ? $presets['username'] : ''; ?>" type="text" id="username" name="username"></div>
+                <div> Email: <input value="<?php echo isset($presets['email']) ? $presets['email'] : ''; ?>" type="text" id="email" name="email"></div>
                 <div> Password: <input type="password" id="password" name="password"></div>
                 <div> Confirm Password: <input type="password" id="confirmPass" name="confirmPassword"></div>
                 <div><input type="submit" value="Create User"></div>
