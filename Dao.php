@@ -27,7 +27,7 @@ class Dao {
   }
   
   public function createHeading () {
-  	echo "<div id=\"header\">
+  	return "<div id=\"header\">
             <img alt= \"Running Header\" src= \"header.jpeg\"> 
             <img alt= \"logo\" src= \"logo.jpeg\" id= \"logo\">
         </div>
