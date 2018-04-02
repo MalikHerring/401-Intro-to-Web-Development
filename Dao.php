@@ -61,12 +61,11 @@ class Dao {
     $query->execute();
   }
   
-  #public function checkAccess($username) {
-  #  $conn = $this->getConnection();
-  #  $query = $conn->prepare("SELECT " . $username . " FROM user WHERE access = '1'");
-  #  $query->execute();
-  #  $result = $query->fetchAll();
-  #  return $result; 
-  #}      
+  public function checkAccess($username) {
+    $conn = $this->getConnection();
+    $query = $conn->prepare("SELECT " . $username . " FROM user WHERE access = '1'");
+    $result = $query->execute();
+    return $result; 
+  }      
 }
 
