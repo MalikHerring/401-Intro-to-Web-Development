@@ -30,25 +30,23 @@
                     }
                 } else {
                     $user = $dao->getUsers($username);
-                    print "<h1> Welcome " . htmlspecialchars($user['username']) . "</h1>"
-                    ADSFGASDGASGDSGAGSD GET THIS DONE
-                    
+                    print   "<h1> Welcome, " . htmlspecialchars($user['username']) . "</h1>" .
+                            "<div> <h3> Your current experience is " . $user['exp'] . "</h3> </div>" .
+                            "<div> <h3> The number of your current goals are: " . $user['currentGoals'] . "</h3> </div>" .
+                            "<div> <h3> The number of your completed goals are: " . $user['completeGoals'] . "</h3> </div>" .
+                            "<div> <h4> Your Account ID Number is: " . $user['accountID'] . "</h3> </div>";
+                }                  
             ?>
             </table>
         </div>
         <div id="sidebar">       
-            <?php if(isset($username){ ?>
-            <div>
-                <h1>Welcome back, <?php $username ?> </h1>
-            <?php } else { ?>
             <form action="createHandler.php" method="POST" enctype="multipart/form-data">
-                <div> Username: <br/><input type="text" id="username" name="username"></div>
-                <div> Email: <br/><input type="text" id="email" name="email"></div>
-                <div> Password: <br/><input type="password" id="password" name="password"></div>
-                <div> Confirm Password:<br/><input type="password" id="confirmPass" name="confirmPassword"></div>
+                <div> Username: <input value="<?php echo isset($presets['username']) ? $presets['username'] : ''; ?>" type="text" id="username" name="username"></div>
+                <div> Email: <input value="<?php echo isset($presets['email']) ? $presets['email'] : ''; ?>" type="text" id="email" name="email"></div>
+                <div> Password: <input type="password" id="password" name="password"></div>
+                <div> Confirm Password: <input type="password" id="confirmPass" name="confirmPassword"></div>
                 <div><input type="submit" value="Create User"></div>
-            </form>"
-            <?php } ?>
+            </form>
         <?php
             if (isset($_SESSION['messages'])){
                 $validity = $_SESSION['validity'];
