@@ -31,7 +31,7 @@
                                 "<td>" . $user['exp'] . "</td>" .
                                 "<td>" . $user['currentGoals'] . "</td>" .
                                 "<td>" . $user['completeGoals'] . "</td>" .
-                                "<td>" . $user['accountID'] . "</td></tr>" .;
+                                "<td>" . $user['accountID'] . "</td></tr>";
                     }
                 } else {
                     $user = $dao->getUsers($username);
