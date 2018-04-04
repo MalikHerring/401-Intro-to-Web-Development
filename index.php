@@ -19,6 +19,16 @@
 	<?php     
             $heading = $dao->createHeading();
             echo $heading; 
+                    
+            $presets= array();
+        
+            if (isset($_SESSION['presets'])){
+                $presets= array_shift($_SESSION['presets']);
+            }
+            
+            unset($_SESSION['presets']);
+            unset($_SESSION['messages']);
+            unset($_SESSION['messages']);
         ?>
         <div id="mainBox">
             <h2> Current Account List </h2>
@@ -37,6 +47,23 @@
                 }
             ?>
             </table>
+            
+            <?php
+                $username = $_SESSION['username'];
+                if (!isset($username)){
+                    echo "<h2> Please Log in or create an Account on the righthand side</h2>";
+                } else {
+                    print 
+                        "<form action=\"eventHandler.php\" method=\"POST\" enctype=\"multipart/form-data\" id=\"event\">" .
+                            "<div> Title: <input value=" . echo isset($presets['title']) ? $presets['title'] : ''; . "type =\"text\" id=\"eventTitle\" name=\"eventTitle\"></div>" .
+                            "<div> Date: <input type=\"date\" name=\"completionDate\" min= " . echo date("Y-m-d"); . "></div>" .
+                            "<div> Description: <textarea name=\"description\" form=\"event\"></textarea></div>" .
+                            "<div><input type=\"submit\" value=\"Create Event\"></div>" .
+                        "</form>";
+                            
+                }
+            ?>
+            
         </div>
         <div id="sidebar">
         <?php
@@ -46,16 +73,6 @@
                     echo "<div class='message $validity'>$message</div>";
                 }
             }
-        
-            $presets= array();
-        
-            if (isset($_SESSION['presets'])){
-                $presets= array_shift($_SESSION['presets']);
-            }
-            
-            unset($_SESSION['presets']);
-            unset($_SESSION['messages']);
-            unset($_SESSION['messages']);
         ?>
             <div id="Login">
                 <form action="loginHandler.php" method="POST" enctype="multipart/form-data">
@@ -67,7 +84,7 @@
             <div id="CreateAccount">
                 <form action="createHandler.php" method="POST" enctype="multipart/form-data">
                     <div> Username: <input value="<?php echo isset($presets['username']) ? $presets['username'] : ''; ?>" type="text" id="username" name="username"></div>
-                    <div> Email: <input value="<?php echo isset($presets['email']) ? $presets['email'] : ''; ?>" type="text" id="email" name="email"></div>
+                    <div> Email: <input value="<?php echo isset($presets['email']) ? $presets['email'] : ''; ?>" type="email" id="email" name="email"></div>
                     <div> Password: <input type="password" id="password" name="password"></div>
                     <div> Confirm Password: <input type="password" id="confirmPass" name="confirmPassword"></div>
                     <div><input type="submit" value="Create User"></div>

@@ -71,7 +71,7 @@
             <div id="CreateAccount">
                 <form action="createHandler.php" method="POST" enctype="multipart/form-data">
                     <div> Username: <input value="<?php echo isset($presets['username']) ? $presets['username'] : ''; ?>" type="text" id="username" name="username"></div>
-                    <div> Email: <input value="<?php echo isset($presets['email']) ? $presets['email'] : ''; ?>" type="text" id="email" name="email"></div>
+                    <div> Email: <input value="<?php echo isset($presets['email']) ? $presets['email'] : ''; ?>" type="email" id="email" name="email"></div>
                     <div> Password: <input type="password" id="password" name="password"></div>
                     <div> Confirm Password: <input type="password" id="confirmPass" name="confirmPassword"></div>
                     <div><input type="submit" value="Create User"></div>
