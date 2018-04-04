@@ -51,6 +51,11 @@
         $valid = false;
     }
     
+    if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+        $messages[] = "Invalid Email Format";
+        $valid = false;
+    }
+    
     if(empty($password)){
         $messages[] = "Please provide a password";
         $valid = false;
@@ -59,10 +64,15 @@
         $messages[] = "Please provide a password longer than 6 characters";
         $valid = false;
     }
+    if ($dao->verifyPassword($password) == 1){
+        $messages[] = "Password must contain a capital, lowercase, and number characters";
+        $valid = false;
+    }
     if (strcmp($password, $confirmPassword) != 0){
         $messages[] = "Passwords do not match";
         $valid = false;
     }
+
     
     if(!$valid){
         $_SESSION['validity'] = "invalid";

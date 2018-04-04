@@ -89,6 +89,10 @@ class Dao {
             return ($user['access']);
         }
     }
-  }      
+  }
+  
+  public function verifyPassword($password){
+  $regex="^\S*(?=\S*[a-z])(?=\S*[A-Z])(?=\S*[\d])\S*$";
+  return preg_match($regex, $password);
 }
 
