@@ -52,14 +52,20 @@ class Dao {
   }
   
   public function getUser($username){
-    $conn = $this->getConnection();
-    $query = $conn->prepare("SELECT * FROM user WHERE username = :username");
-    $query->bindParam(':username', $username);
-    $query->setFetchMode(PDO::FETCH_ASSOC);
-    $query->execute();
-    $results = $query->fetchAll();
-    $this->logger->logDebug(__FUNCTION__ . " " . print_r($results,1));
-    return $results;
+    $users=$this->getUsers();
+    foreach($users as $user){
+        if(strcmp($user['username'], $username) == 0){
+            return $user;
+        }
+    }
+  #  $conn = $this->getConnection();
+  #  $query = $conn->prepare("SELECT * FROM user WHERE username = :username");
+  #  $query->bindParam(':username', $username);
+  #  $query->setFetchMode(PDO::FETCH_ASSOC);
+  #  $query->execute();
+  #  $results = $query->fetchAll();
+  #  $this->logger->logDebug(__FUNCTION__ . " " . print_r($results,1));
+  #  return $results;
   }
   
   public function saveUser($username, $email, $password){
@@ -73,10 +79,16 @@ class Dao {
   }
   
   public function checkAccess($username) {
-    $conn = $this->getConnection();
-    $query = $conn->prepare("SELECT " . $username . " FROM user WHERE access = '1'");
-    $result = $query->execute();
-    return $result; 
+    #$conn = $this->getConnection();
+    #$query = $conn->prepare("SELECT " . $username . " FROM user WHERE access = '1'");
+    #$result = $query->execute();
+    #return $result;
+    $users=$this->getUsers();
+    foreach($users as $user){
+        if (strcmp($user['username'], $username) == 0){
+            return ($user['access']);
+        }
+    }
   }      
 }
 

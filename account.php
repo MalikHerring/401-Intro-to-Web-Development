@@ -2,10 +2,6 @@
     session_start();
     require_once 'Dao.php';
     $dao = new Dao();
-    $username;
-    if (isset($_SESSION['username'])){
-        $username = $_SESSION['username'];
-    }
 ?>
 
 <html>
@@ -23,7 +19,8 @@
         <div id="mainBox">
             <table>
             <?php
-                if (!empty($dao->checkAccess($username))){
+                $username = $_SESSION['username'];
+                if ($dao->checkAccess($username) == 1){
                     echo "<tr><th>Username</th><th>Email</th><th>Exp.</th><th>Current Goals</th><th>Completed Goals</th><th>Account ID</th></tr>";
                     $users = $dao->getUsers();
                     foreach($users as $user) {
@@ -46,13 +43,22 @@
             </table>
         </div>
         <div id="sidebar">       
-            <form action="createHandler.php" method="POST" enctype="multipart/form-data">
-                <div> Username: <input value="<?php echo isset($presets['username']) ? $presets['username'] : ''; ?>" type="text" id="username" name="username"></div>
-                <div> Email: <input value="<?php echo isset($presets['email']) ? $presets['email'] : ''; ?>" type="text" id="email" name="email"></div>
-                <div> Password: <input type="password" id="password" name="password"></div>
-                <div> Confirm Password: <input type="password" id="confirmPass" name="confirmPassword"></div>
-                <div><input type="submit" value="Create User"></div>
-            </form>
+            <div id="Login">
+                <form action="loginHandler.php" method="POST" enctype="multipart/form-data">
+                    <div> Username: <input value="<?php echo isset($presets['username']) ? $presets['username'] : ''; ?>" type="text" id="username" name="username"></div>
+                    <div> Password: <input type="password" id="password" name="password"></div>
+                    <div><input type="submit" value="Create User"></div>
+                </form>
+            </div>
+            <div id="CreateAccount">
+                <form action="createHandler.php" method="POST" enctype="multipart/form-data">
+                    <div> Username: <input value="<?php echo isset($presets['username']) ? $presets['username'] : ''; ?>" type="text" id="username" name="username"></div>
+                    <div> Email: <input value="<?php echo isset($presets['email']) ? $presets['email'] : ''; ?>" type="text" id="email" name="email"></div>
+                    <div> Password: <input type="password" id="password" name="password"></div>
+                    <div> Confirm Password: <input type="password" id="confirmPass" name="confirmPassword"></div>
+                    <div><input type="submit" value="Create User"></div>
+                </form>
+            </div>
         <?php
             if (isset($_SESSION['messages'])){
                 $validity = $_SESSION['validity'];
