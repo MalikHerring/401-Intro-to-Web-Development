@@ -32,7 +32,7 @@
     
     
     $_SESSION['validity'] = "invalid";
-    $_SESSION['messages'] = array("Username or Password Incorrect")
+    $_SESSION['messages'] = array("Username or Password Incorrect");
     header("Location: index.php");
     exit;
 ?>
