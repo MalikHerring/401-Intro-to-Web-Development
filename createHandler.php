@@ -17,7 +17,7 @@
         $messages[] = "Please provide a username.";
         $valid = false;
     }
-        $user = $dao->getUser($username);
+        $user = $dao->getUsers();
     if ($username == $user['username']){
         $messages[] = "Username already taken, Please provide a username";
         $valid = false;
