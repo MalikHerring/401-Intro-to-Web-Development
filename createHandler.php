@@ -28,7 +28,7 @@
             $messages[] = $user['username'] . "<- user username";
             $valid = false;
         }
-        if (strcmp($user['email'], $email) == 0 {
+        if (strcmp($user['email'], $email) == 0) {
             $messages[] = "Email is already in use, please provide a different email";
             $valid = false;
         }
