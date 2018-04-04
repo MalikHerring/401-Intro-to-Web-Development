@@ -16,10 +16,12 @@
     if (empty(username)){
         $messages[] = "Please provide a username.";
         $valid = false;
-    } elseif ($username == $dao->getUsers($username)){
+    }
+    if ($username == $dao->getUsers($username)){
         $messages[] = "Username already taken, Please provide a username";
         $valid = false;
-    } elseif (strlen($username) > 16){
+    }
+    if (strlen($username) > 16){
         $messages[] = "Username cannot be more than 16 characters long";
         $valid = false;
     }
