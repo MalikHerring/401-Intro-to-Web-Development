@@ -17,17 +17,32 @@
         $messages[] = "Please provide a username.";
         $valid = false;
     }
-        $user = $dao->getUsers();
-    if ($username == $user['username']){
-        $messages[] = "Username already taken, Please provide a username";
-        $valid = false;
-    } else {
-        $messages[] = "it made it here";
-        $messages[] = $username . "<- username";
-        $messages[] = $user['username'] . "<- user username";
-        $messages[] = $user;
-        $valid = false;
+        $users = $dao->getUsers();
+    foreach($users as $user){
+        if(strcmp($user['username'], $username) == 0){
+            $messages[] = "Username already taken, Please provide a username";
+            $valid = false;
+        } else {
+            $messages[] = "Usernames are not equal";
+            $messages[] = $username . "<- username";
+            $messages[] = $user['username'] . "<- user username"
+            $valid = false;
+        }
+        if (strcmp($user['email'], $email) == 0 {
+            $messages[] = "Email is already in use, please provide a different email";
+            $valid = false;
+        }
     }
+ #   if ($username == $user['username']){
+ #       $messages[] = "Username already taken, Please provide a username";
+ #       $valid = false;
+ #   } else {
+ #       $messages[] = "it made it here";
+ #       $messages[] = $username . "<- username";
+ #       $messages[] = $user['username'] . "<- user username";
+ #       $messages[] = $user;
+ #       $valid = false;
+ #   }
         
     if (strlen($username) > 16){
         $messages[] = "Username cannot be more than 16 characters long";
