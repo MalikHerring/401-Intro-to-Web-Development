@@ -64,7 +64,7 @@
         $messages[] = "Please provide a password longer than 6 characters";
         $valid = false;
     }
-    if ($dao->verifyPassword($password) == 1){
+    if (!$dao->verifyPassword($password)){
         $messages[] = "Password must contain a capital, lowercase, and number characters";
         $valid = false;
     }
