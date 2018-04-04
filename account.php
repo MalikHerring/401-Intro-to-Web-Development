@@ -25,7 +25,7 @@
             <?php
                 if (!empty($dao->checkAccess($username))){
                     echo "<tr><th>Username</th><th>Email</th><th>Exp.</th><th>Current Goals</th><th>Completed Goals</th><th>Account ID</th></tr>";
-                    $users = $dao->getUsers("*");
+                    $users = $dao->getUsers();
                     foreach($users as $user) {
                         print   "<tr><td>" . htmlspecialchars($user['username']) . "</td>" .
                                 "<td>" . htmlspecialchars($user['email']) . "</td>" .
@@ -35,7 +35,7 @@
                                 "<td>" . $user['accountID'] . "</td></tr>";
                     }
                 } else {
-                    $user = $dao->getUsers($username);
+                    $user = $dao->getUser($username);
                     print   "<h1> Welcome, " . htmlspecialchars($user['username']) . "</h1>" .
                             "<div> <h3> Your current experience is " . $user['exp'] . "</h3> </div>" .
                             "<div> <h3> The number of your current goals are: " . $user['currentGoals'] . "</h3> </div>" .

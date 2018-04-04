@@ -41,9 +41,19 @@ class Dao {
 	</div>";
   }
   
-  public function getUsers($queryStr){
+  public function getUsers(){
     $conn = $this->getConnection();
-    $query = $conn->prepare("select " . $queryStr . " from user");
+    $query = $conn->prepare("select * from user");
+    $query->setFetchMode(PDO::FETCH_ASSOC);
+    $query->execute();
+    $results = $query->fetchAll();
+    $this->logger->logDebug(__FUNCTION__ . " " . print_r($results,1));
+    return $results;
+  }
+  
+  public function getUser($username){
+    $conn = $this->getConnection();
+    $query = $conn->prepare("select * from user WHERE username = " . $username);
     $query->setFetchMode(PDO::FETCH_ASSOC);
     $query->execute();
     $results = $query->fetchAll();

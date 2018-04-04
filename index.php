@@ -24,7 +24,7 @@
             <h2> Current Account List </h2>
             <table>
             <?php
-                $users = $dao->getUsers("*");
+                $users = $dao->getUsers();
                 echo    "<tr><th>Username</th><th>Email</th>" . 
                         #<th>Password</th> .
                         "<th>Access</th><th>Account ID</th><tr>";
