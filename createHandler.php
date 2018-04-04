@@ -22,7 +22,7 @@
         $messages[] = "Username already taken, Please provide a username";
         $valid = false;
     } else {
-        $messages[] = "it made it here"
+        $messages[] = "it made it here";
         $valid = false;
     }
         
