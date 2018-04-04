@@ -25,7 +25,7 @@
         } else {
             $messages[] = "Usernames are not equal";
             $messages[] = $username . "<- username";
-            $messages[] = $user['username'] . "<- user username"
+            $messages[] = $user['username'] . "<- user username";
             $valid = false;
         }
         if (strcmp($user['email'], $email) == 0 {
