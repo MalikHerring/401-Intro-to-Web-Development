@@ -22,12 +22,12 @@
         if(strcmp($user['username'], $username) == 0){
             $messages[] = "Username already taken, Please provide a username";
             $valid = false;
-        } else {
-            $messages[] = "Usernames are not equal";
-            $messages[] = $username . "<- username";
-            $messages[] = $user['username'] . "<- user username";
-            $valid = false;
-        }
+        } #else {
+          #  $messages[] = "Usernames are not equal";
+          #  $messages[] = $username . "<- username";
+          #  $messages[] = $user['username'] . "<- user username";
+          #  $valid = false;
+        #}
         if (strcmp($user['email'], $email) == 0) {
             $messages[] = "Email is already in use, please provide a different email";
             $valid = false;
