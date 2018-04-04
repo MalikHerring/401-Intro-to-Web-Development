@@ -25,6 +25,7 @@
         $messages[] = "it made it here";
         $messages[] = $username . "<- username";
         $messages[] = $user['username'] . "<- user username";
+        $messages[] = $user;
         $valid = false;
     }
         
