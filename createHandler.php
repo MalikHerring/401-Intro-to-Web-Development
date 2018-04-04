@@ -22,15 +22,12 @@
         if(strcmp($user['username'], $username) == 0){
             $messages[] = "Username already taken, Please provide a username";
             $valid = false;
-        } #else {
-          #  $messages[] = "Usernames are not equal";
-          #  $messages[] = $username . "<- username";
-          #  $messages[] = $user['username'] . "<- user username";
-          #  $valid = false;
-        #}
+            break;
+        } 
         if (strcmp($user['email'], $email) == 0) {
             $messages[] = "Email is already in use, please provide a different email";
             $valid = false;
+            break;
         }
     }
  #   if ($username == $user['username']){
@@ -55,12 +52,14 @@
     }
     
     if(empty($password)){
-        $messages[] = "Please provide an email";
+        $messages[] = "Please provide a password";
         $valid = false;
-    } elseif (strlen($password) < 6){
+    }
+    if (strlen($password) < 6){
         $messages[] = "Please provide a password longer than 6 characters";
         $valid = false;
-    } elseif (strcmp($password, $confirmPassword) != 0){
+    }
+    if (strcmp($password, $confirmPassword) != 0){
         $messages[] = "Passwords do not match";
         $valid = false;
     }
