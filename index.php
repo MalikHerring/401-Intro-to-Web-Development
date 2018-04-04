@@ -53,10 +53,10 @@
                 if (!isset($username)){
                     echo "<h2> Please Log in or create an Account on the righthand side</h2>";
                 } else {
-                    $title = isset($presets['title']) ? $presets['title'] : '';
+                    #$title = isset($presets['title']) ? $presets['title'] : '';
                     $date = date("Y-m-d");
                     echo    "<form action=\"eventHandler.php\" method=\"POST\" enctype=\"multipart/form-data\" id=\"event\">" .
-                                "<div> Title: <input value=" . $title . "type =\"text\" id=\"eventTitle\" name=\"eventTitle\"></div>" .
+                                "<div> Title: <input type =\"text\" id=\"eventTitle\" name=\"eventTitle\"></div>" .
                                 "<div> Date: <input type=\"date\" name=\"completionDate\" min= " . $date . "></div>" .
                                 "<div> Description: <textarea name=\"description\" form=\"event\"></textarea></div>" .
                                 "<div><input type=\"submit\" value=\"Create Event\"></div>" .
