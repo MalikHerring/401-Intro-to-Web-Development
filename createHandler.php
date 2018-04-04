@@ -23,6 +23,8 @@
         $valid = false;
     } else {
         $messages[] = "it made it here";
+        $messages[] = $username;
+        $messages[] = $user['username'];
         $valid = false;
     }
         
