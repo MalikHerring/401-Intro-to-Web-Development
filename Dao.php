@@ -55,9 +55,7 @@ class Dao {
     $conn = $this->getConnection();
     $query = $conn->prepare("SELECT * FROM user WHERE username = :username");
     $query->bindParam(':username', $username);
-    $query->setFetchMode(PDO::FETCH_ASSOC);
     $query->execute();
-    $results = $query->fetchAll();
     $this->logger->logDebug(__FUNCTION__ . " " . print_r($results,1));
     return $results;
   }
