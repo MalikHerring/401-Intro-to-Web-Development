@@ -55,8 +55,8 @@
                 } else {
                     print 
                         "<form action=\"eventHandler.php\" method=\"POST\" enctype=\"multipart/form-data\" id=\"event\">" .
-                            "<div> Title: <input value=" . echo isset($presets['title']) ? $presets['title'] : ''; . "type =\"text\" id=\"eventTitle\" name=\"eventTitle\"></div>" .
-                            "<div> Date: <input type=\"date\" name=\"completionDate\" min= " . echo date("Y-m-d"); . "></div>" .
+                            "<div> Title: <input value=" . isset($presets['title']) ? $presets['title'] : ''; . "type =\"text\" id=\"eventTitle\" name=\"eventTitle\"></div>" .
+                            "<div> Date: <input type=\"date\" name=\"completionDate\" min= " . date("Y-m-d"); . "></div>" .
                             "<div> Description: <textarea name=\"description\" form=\"event\"></textarea></div>" .
                             "<div><input type=\"submit\" value=\"Create Event\"></div>" .
                         "</form>";
