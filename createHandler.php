@@ -18,10 +18,14 @@
         $valid = false;
     }
     $user = $dao->getUsers("alph");
-    if (!empty($user['username'])){
+    if ($username == $user['username']){
         $messages[] = "Username already taken, Please provide a username";
         $valid = false;
+    } else {
+        $messages[] = "it made it here"
+        $valid = false;
     }
+        
     if (strlen($username) > 16){
         $messages[] = "Username cannot be more than 16 characters long";
         $valid = false;
