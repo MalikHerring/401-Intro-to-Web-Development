@@ -53,7 +53,8 @@ class Dao {
   
   public function getUser($username){
     $conn = $this->getConnection();
-    $query = $conn->prepare("SELECT username FROM user WHERE username = " . $username);
+    $query = $conn->prepare("SELECT * FROM user WHERE username = :username");
+    $query->bindParam(':username', $username);
     $query->setFetchMode(PDO::FETCH_ASSOC);
     $query->execute();
     $results = $query->fetchAll();
