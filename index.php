@@ -6,19 +6,9 @@
     if (isset($_SESSION['username'])){
         $username = $_SESSION['username'];
     }
-?>
+    include("header.php");
+  
 
-<html>
-    <head>
-        <title>Life Goals</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    </head>
-    <body>
-    <div id = content>
-	<?php     
-            $heading = $dao->createHeading();
-            echo $heading; 
                     
             $presets= array();
         

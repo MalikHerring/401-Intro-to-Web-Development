@@ -7,17 +7,9 @@
     if (isset($_SESSION['username'])){
         $username = $_SESSION['username'];
     }
+    include("header.php");
 ?>
 
-<html>
-    <head>
-        <title>LifeGoals</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    </head>
-    <body>
-    <div id = content>
-	<?php echo $heading; ?>
         <div id="mainBox">
             <p> Will display Day, Week, Month, Year schedule </p>
         </div>

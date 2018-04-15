@@ -26,21 +26,6 @@ class Dao {
     }
   }
   
-  public function createHeading () {
-  	return "<div id=\"header\">
-            <img alt= \"Running Header\" src= \"header.jpeg\"> 
-            <img alt= \"logo\" src= \"logo.jpeg\" id= \"logo\">
-        </div>
-	<div id=\"menubar\">
-            <ul id=\"horizontal-menu\" id=\"menuText\">
-                <li><a href=\"index.php\" alt=\"Home\">Home</a></li>
-                <li><a href=\"schedule.php\" alt=\"Schedule\">Schedule</a></li>
-                <li><a href=\"account.php\" alt=\"Account\">Account</a></li>
-                <li><a href=\"phpInfo.php\" alt=\"PHP Info\">PHP Info</a></li>
-            </ul>
-	</div>";
-  }
-  
   public function getUsers(){
     $conn = $this->getConnection();
     $query = $conn->prepare("select * from user");
