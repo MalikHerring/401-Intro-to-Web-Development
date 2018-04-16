@@ -11,7 +11,7 @@ class Dao {
   protected $logger;
   
   public function __construct () {
-    $this->logger = new KLogger('/home/malikherring/CS401/src/www', KLogger::DEBUG);
+    $this->logger = new KLogger('/home/malikherring/CS401', KLogger::DEBUG);
   }
   
   public function getConnection () {
