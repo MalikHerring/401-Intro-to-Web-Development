@@ -33,7 +33,7 @@
             } else {
                 #$title = isset($presets['title']) ? $presets['title'] : '';
                 $date = date("Y-m-d"); ?>
-            <form action="/handlers/eventHandler.php" method="POST" enctype="multipart/form-data" id="event"> 
+            <form action="eventHandler.php" method="POST" enctype="multipart/form-data" id="event"> 
                     <div> Title: <input type ="text" id="eventTitle" name="eventTitle"></div>
                     <div> Date: <input type="date" name="completionDate" min="<?php $date ?>"></div>
                     <div> Description: <textarea name="description" form="event"></textarea></div> 
