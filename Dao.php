@@ -1,6 +1,9 @@
 <?php
+
 require_once 'KLogger.php';
+
 class Dao {
+
   private $host = "us-cdbr-iron-east-05.cleardb.net";
   private $db = "heroku_c1e7d16168842d5";
   private $user = "b0c907fbbec6d1";
@@ -8,7 +11,7 @@ class Dao {
   protected $logger;
   
   public function __construct () {
-    $this->logger = new KLogger('/home/malikherring/CS401/src/www', KLogger::DEBUG);
+    $this->logger = new KLogger('/home/malikherring/CS401', KLogger::DEBUG);
   }
   
   public function getConnection () {
@@ -96,3 +99,4 @@ class Dao {
     return preg_match($regex, $password);
   }
 }
+
