@@ -17,10 +17,10 @@ div.button{
     background-color:#50A2A7;
     color:#FFF;
     width:150px;
-    height:50px;
     text-align:center;
     padding: 20px 5px;
-    margin: 5px auto;
+    margin-left:auto;
+    margin-right:auto;
     display: block;
 }
 
