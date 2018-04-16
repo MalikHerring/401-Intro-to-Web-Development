@@ -61,7 +61,7 @@
         } catch (Exception $e) {
             echo "Something went wrong: " . e->getMessage();
         }
-        header("Location: index.php");
+        header("Location: ../index.php");
         exit;
     }
     
@@ -74,7 +74,7 @@
         echo "Something went wrong: " . e->getMessage();
     }
     
-    header("Location: index.php");
+    header("Location: ../index.php");
     exit;
 
 ?>

@@ -27,14 +27,14 @@
         $_SESSION['messages'] = $messages;
         $_SESSION['username'] = $username;
         unset($_SESSION['presets']);
-        header("Location: index.php");
+        header("Location: ../index.php");
         exit;
     }
     
     
     $_SESSION['validity'] = "invalid";
     $_SESSION['messages'] = array("Username or Password Incorrect");
-    header("Location: index.php");
+    header("Location: ../index.php");
     exit;
 ?>
     
