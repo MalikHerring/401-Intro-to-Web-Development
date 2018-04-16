@@ -14,11 +14,11 @@
     $valid = true;
     $messages = array();
     
-    if (empty(username)){
+    if (empty($username)){
         $messages[] = "Please provide a username.";
         $valid = false;
     }
-    if(doesUserExist($email, $username)){
+    if($dao->doesUserExist($email, $username)){
         $messages[] = "User Already Exists with that Username or Email.";
         $valid = false;
     }
