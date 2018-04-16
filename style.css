@@ -14,14 +14,19 @@
 }
 
 div.button{
-    background-color:#50A2A7;
+    background-color:#004BA8;
     color:#FFF;
     width:150px;
     text-align:center;
     padding: 20px 5px;
     margin-left:auto;
     margin-right:auto;
+    margin-bottom: 5px;
     display: block;
+}
+
+div.button:hover{
+    background-color:#50A2A7;
 }
 
 #content {
@@ -79,6 +84,14 @@ div#sidebar{
     border-color: black;
     float: right;
     padding: 5px;
+}
+
+div.Login{
+    visibility: visible;
+}
+
+div.CreateAccount{
+    visibility: visible;
 }
 
 div#footer{
