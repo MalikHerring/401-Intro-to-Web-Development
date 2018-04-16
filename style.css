@@ -16,6 +16,8 @@
 .button{
     background-color:#50A2A7;
     color:#FFF;
+    width:150px;
+    height:30px;
 }
 
 #content {
