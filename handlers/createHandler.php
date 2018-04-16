@@ -76,7 +76,7 @@
     if(!$valid){
         $_SESSION['validity'] = "invalid";
         $_SESSION['messages'] = $messages;
-        header("Location: index.php");
+        header("Location: ../index.php");
         exit;
     }
     
@@ -86,6 +86,6 @@
     
     $dao->saveUser($username, $email, $password);
     
-    header("Location: index.php");
+    header("Location: ../index.php");
     exit;
 ?>
