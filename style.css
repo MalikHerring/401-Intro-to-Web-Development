@@ -13,6 +13,11 @@
   background-color:#228B22;
 }
 
+.button{
+    background-color:#50A2A7;
+    color:#FFF;
+}
+
 #content {
     min-width:810px;
     min-height: 750px;

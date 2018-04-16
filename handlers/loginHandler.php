@@ -26,6 +26,7 @@
         $_SESSION['validity'] = "valid";
         $_SESSION['messages'] = $messages;
         $_SESSION['username'] = $username;
+        unset($_SESSION['presets']);
         header("Location: index.php");
         exit;
     }
