@@ -18,12 +18,10 @@
         $messages[] = "Please provide a username.";
         $valid = false;
     }
-    
     if(doesUserExist($email, $username)){
         $messages[] = "User Already Exists with that Username or Email.";
         $valid = false;
     }
-        
     if (strlen($username) > 16){
         $messages[] = "Username cannot be more than 16 characters long";
         $valid = false;
@@ -33,7 +31,6 @@
         $messages[] = "Please provide an email";
         $valid = false;
     }
-    
     if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
         $messages[] = "Invalid Email Format";
         $valid = false;
@@ -58,8 +55,12 @@
 
     
     if(!$valid){
+        try {
         $_SESSION['validity'] = "invalid";
         $_SESSION['messages'] = $messages;
+        } catch (Exception $e) {
+            echo "Something went wrong: " . e->getMessage();
+        }
         header("Location: index.php");
         exit;
     }
@@ -69,12 +70,13 @@
     $_SESSION['username'] = $username;
     
     $dao->saveUser($username, $email, $password);
+    } catch (Exception $e) {
+        echo "Something went wrong: " . e->getMessage();
+    }
     
     header("Location: index.php");
     exit;
-    catch (Exception $e) {
-        echo "Something went wrong: " . e->getMessage();
-    }
+
 ?>
     
 
