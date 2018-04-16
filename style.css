@@ -27,6 +27,7 @@ div.button{
 
 div.button:hover{
     background-color:#50A2A7;
+    cursor: pointer;
 }
 
 #content {
