@@ -9,7 +9,7 @@
             <table>
             <?php
                 $username = $_SESSION['username'];
-                if ($dao->checkAccess($username) == 1){
+                if ($dao->checkAccess($username)){
                     echo "<tr><th>Username</th><th>Email</th><th>Exp.</th><th>Current Goals</th><th>Completed Goals</th><th>Account ID</th></tr>";
                     $users = $dao->getUsers();
                     foreach($users as $user) {

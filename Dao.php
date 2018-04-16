@@ -83,14 +83,14 @@ class Dao {
   
   public function checkAccess($username) {
     $conn = $this->getConnection();
-    $query = $conn->prepare("SELECT " . $username . " FROM user WHERE access = '1'");
-    $result = $query->execute();
-    return $result;
-    $users=$this->getUsers();
-    foreach($users as $user){
-        if (strcmp($user['username'], $username) == 0){
-            return ($user['access']);
-        }
+    $query = $conn->prepare("SELECT * FROM user WHERE username = :username AND access = '1'");
+    $query->bindParam(':username', $username);
+    $query->execute();
+    $result = $query->fetch(PDO::FETCH_ASSOC);
+    if (is_array($results) && 0 < count($results)){
+        return true;
+    } else {
+        return false;
     }
   }
   

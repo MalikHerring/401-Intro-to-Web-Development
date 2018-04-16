@@ -1,5 +1,5 @@
 <?php
-    try{
+
     session_start();
     require_once 'Dao.php';
     $dao = new Dao();
@@ -55,12 +55,8 @@
 
     
     if(!$valid){
-        try {
         $_SESSION['validity'] = "invalid";
         $_SESSION['messages'] = $messages;
-        } catch (Exception $e) {
-            echo "Something went wrong: " . e->getMessage();
-        }
         header("Location: index.php");
         exit;
     }
@@ -70,9 +66,6 @@
     $_SESSION['username'] = $username;
     
     $dao->saveUser($username, $email, $password);
-    } catch (Exception $e) {
-        echo "Something went wrong: " . e->getMessage();
-    }
     
     header("Location: index.php");
     exit;
