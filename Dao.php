@@ -50,6 +50,22 @@ class Dao {
     }
   }
   
+  public function login($username, $password){
+    $salt = '!@%#^^%*&;rweltkjusofd;iajg168152410';
+    $password=md5($password . $salt);
+    $conn = $this->getConnection();
+    $query = $conn->prepare("SELECT * FROM user where username = :username AND password = :password");
+    $query->bindParam(":username", $username);
+    $query->bindParam(":password", $password);
+    $query->execute();
+    $results=$query->fetch(PDO::FETCH_ASSOC);
+    if (is_array($results) && 0 < count($results)){
+        return true;
+    } else {
+        return false;
+    }    
+  }
+  
   public function getUser($username, $password){
     #$users=$this->getUsers();
     #foreach($users as $user){

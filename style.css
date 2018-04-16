@@ -78,6 +78,7 @@ div#sidebar{
     border-width: 2px;
     border-color: black;
     float: right;
+    padding: 5px;
 }
 
 div#footer{

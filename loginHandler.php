@@ -8,33 +8,20 @@
     
     $_SESSION['presets'] = array($_POST);
     
-    $valid = false;
-    $messages = array();
-    $users = $dao->getUsers();
     
-    foreach ($users as $user){
-        if (strcmp($user['username'], $username) == 0) {
-            if (strcmp($user['password'], $password) == 0) {
-                $messages[] = "Welcome back, " . $username;
-                $valid = true;
-                break;
-            } 
-        }
-    }
-    
-    if ($valid) {
+    if($dao->login($username, $password)){
         $_SESSION['validity'] = "valid";
-        $_SESSION['messages'] = $messages;
+        $_SESSION['messages'] = array("Welcome Back, " . $username . "!");
         $_SESSION['username'] = $username;
         unset($_SESSION['presets']);
-        header("Location: ../index.php");
+        header("Location: index.php");
         exit;
     }
     
     
     $_SESSION['validity'] = "invalid";
     $_SESSION['messages'] = array("Username or Password Incorrect");
-    header("Location: ../index.php");
+    header("Location: index.php");
     exit;
 ?>
     
