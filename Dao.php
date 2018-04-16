@@ -1,9 +1,6 @@
 <?php
-
 require_once 'KLogger.php';
-
 class Dao {
-
   private $host = "us-cdbr-iron-east-05.cleardb.net";
   private $db = "heroku_c1e7d16168842d5";
   private $user = "b0c907fbbec6d1";
@@ -11,7 +8,7 @@ class Dao {
   protected $logger;
   
   public function __construct () {
-    $this->logger = new KLogger('/home/malikherring/CS401', KLogger::DEBUG);
+    $this->logger = new KLogger('/home/malikherring/CS401/src/www', KLogger::DEBUG);
   }
   
   public function getConnection () {
@@ -51,6 +48,12 @@ class Dao {
   }
   
   public function getUser($username, $password){
+    #$users=$this->getUsers();
+    #foreach($users as $user){
+    #    if(strcmp($user['username'], $username) == 0){
+    #        return $user;
+    #    }
+    #}
     $salt = '!@%#^^%*&;rweltkjusofd;iajg168152410';
     $password=md5($password . $salt);
     $conn = $this->getConnection();
@@ -77,14 +80,14 @@ class Dao {
   
   public function checkAccess($username) {
     $conn = $this->getConnection();
-    $query = $conn->prepare("SELECT * FROM user WHERE username = :username AND access = '1'");
-    $query->bindParam(':username', $username);
-    $query->execute();
-    $result = $query->fetch(PDO::FETCH_ASSOC);
-    if (is_array($results) && 0 < count($results)){
-        return true;
-    } else {
-        return false;
+    $query = $conn->prepare("SELECT " . $username . " FROM user WHERE access = '1'");
+    $result = $query->execute();
+    return $result;
+    $users=$this->getUsers();
+    foreach($users as $user){
+        if (strcmp($user['username'], $username) == 0){
+            return ($user['access']);
+        }
     }
   }
   
@@ -93,5 +96,3 @@ class Dao {
     return preg_match($regex, $password);
   }
 }
-
-?>

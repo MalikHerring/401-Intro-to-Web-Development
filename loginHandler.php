@@ -10,18 +10,18 @@
     
     $valid = false;
     $messages = array();
+    $users = $dao->getUsers();
     
-    if ($dao->doesUserExist(null, $username)){
-        $user = $dao->getUser($username, $password);
-        if (strcmp($user['password'], $password) == 0) {
-            $messages[] = "Welcome back, " . htmlspecialchars($username);
-            $valid = true;
-        }
-    }    
-            if (
+    foreach ($users as $user){
+        if (strcmp($user['username'], $username) == 0) {
+            if (strcmp($user['password'], $password) == 0) {
                 $messages[] = "Welcome back, " . $username;
                 $valid = true;
- 
+                break;
+            } 
+        }
+    }
+    
     if ($valid) {
         $_SESSION['validity'] = "valid";
         $_SESSION['messages'] = $messages;
@@ -37,6 +37,3 @@
     header("Location: index.php");
     exit;
 ?>
-    
-
-    

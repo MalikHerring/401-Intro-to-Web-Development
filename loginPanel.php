@@ -23,21 +23,17 @@
         unset($_SESSION['messages']);
         unset($_SESSION['messages']);
     ?>
-    
-    <div class="button" id="loginButton"> Login </div>
-    
+    <div class="button" id=loginButton> Login </div>
     <div id="Login">
-        <form action="loginHandler.php" method="POST" enctype="multipart/form-data">
+        <form action="handlers/loginHandler.php" method="POST" enctype="multipart/form-data">
             <div> Username: <input value="<?php echo isset($presets['username']) ? $presets['username'] : ''; ?>" type="text" id="username" name="username"></div>
             <div> Password: <input type="password" id="password" name="password"></div>
             <div><input type="submit" value="Login"></div>
         </form>
     </div>
-    
-    <div class="button" id="createButton"> Create Account </div>
-    
+    <div class="button" id=createButton> Create Account </div>
     <div id="CreateAccount">
-        <form action="createHandler.php" method="POST" enctype="multipart/form-data">
+        <form action="handlers/createHandler.php" method="POST" enctype="multipart/form-data">
             <div> Username: <input value="<?php echo isset($presets['username']) ? $presets['username'] : ''; ?>" type="text" id="username" name="username"></div>
             <div> Email: <input value="<?php echo isset($presets['email']) ? $presets['email'] : ''; ?>" type="email" id="email" name="email"></div>
             <div> Password: <input type="password" id="password" name="password"></div>
