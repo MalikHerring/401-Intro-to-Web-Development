@@ -20,6 +20,7 @@ $(document).ready(function() {
         $("#CreateAccount").hide();
         $("div.button").show();
         $("#Cancel").hide();
+	$("#logout").hide();
     });
 });
 

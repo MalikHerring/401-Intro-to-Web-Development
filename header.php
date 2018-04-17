@@ -19,4 +19,10 @@
                 <li<?php if ($thisPage == "schedule") { echo " id =\"currentPage\"";}?>><a href="schedule.php" alt="Schedule">Schedule</a></li>
                 <li<?php if ($thisPage == "account") { echo " id =\"currentPage\"";}?>><a href="account.php" alt="Account">Account</a></li>
             </ul>
+            <?php if (!isset($_SESSION['username'])){ ?>
+            <div id="logout" <?php echo "style=\"display: none; float: right;\"";} ?> > 
+                <form action="logoutHandler.php" enctype="multipart/form-data">
+                    <input type="submit" value="Logout">
+                </form>
+            </div>
         </div>
