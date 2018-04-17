@@ -84,7 +84,11 @@ div#sidebar{
     border-width: 2px;
     border-color: black;
     float: right;
-    padding: auto 5px;
+    padding: 5px;
+    display: block;
+}
+
+.content {
     display:table-cell;
     vertical-align:middle;
 }

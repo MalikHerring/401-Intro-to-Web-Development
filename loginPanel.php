@@ -4,7 +4,8 @@
     $dao = new Dao();
 ?>
 
-<div id="sidebar">       
+<div id="sidebar">
+    <div class="content">
     <?php
         if (isset($_SESSION['messages'])){
             $validity = $_SESSION['validity'];
@@ -41,5 +42,6 @@
             <div><input type="submit" value="Create User"></div>
         </form>
     <div class="button" id="Cancel"> Cancel </div>    
-    </div>            
+    </div>
+    </div>
 </div>
