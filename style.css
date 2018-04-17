@@ -41,6 +41,7 @@
 }
 
 #event{
+    float:left;
     text-align:right;
     min-width:200px;
     
