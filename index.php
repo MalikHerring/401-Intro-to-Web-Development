@@ -34,6 +34,7 @@
             } else {
                 #$title = isset($presets['title']) ? $presets['title'] : '';
                 $date = date("Y-m-d"); ?>
+            <div id="createEvent">
             <h2>Create an Event!</h2>
             <form action="eventHandler.php" method="POST" enctype="multipart/form-data" id="event"> 
                     <div><label for="eventTitle"> 
@@ -55,6 +56,7 @@
                     </label><textarea id="description" name="description" form="event"></textarea></div> 
                     <div><input type="submit" value="Create Event"></div>
             </form>
+            </div>
                             
         <?php } ?>
             

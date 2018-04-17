@@ -68,6 +68,12 @@ div#mainBox{
     float: left;
 }
 
+#createEvent label{
+    display:inline-block;
+    width: 150px;
+    text-align:right;
+}
+
 div#sidebar{
     text-align: center;
     min-width: 200px;
