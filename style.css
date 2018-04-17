@@ -43,9 +43,15 @@
 #event{
     float:left;
     text-align:right;
-    min-width:200px;
-    
+    min-width:200px;    
 }
+
+input{
+    width:100px;
+    height:15px;
+    border-radius: 5px;
+}
+
 #logo {
     float: right;
     height: 20px;

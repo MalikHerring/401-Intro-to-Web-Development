@@ -35,11 +35,12 @@
             } else {
                 #$title = isset($presets['title']) ? $presets['title'] : '';
                 $date = date("Y-m-d"); ?>
+            <div><h2> Create an Event! </h2><div>
             <form action="eventHandler.php" method="POST" enctype="multipart/form-data" id="event"> 
-                    <div><label for="eventTitle"> Title: </label><input type ="text" id="eventTitle" name="eventTitle"></div>
-                    <div> <label for="completionDate"> Date: </label><input type="date" id = "completionDate" name="completionDate" min="<?php echo $date; ?>"></div>
-                    <div><label for="description"> Description: </label><textarea id="description" name="description" form="event"></textarea></div> 
-                    <div><input type="submit" value="Create Event"></div>
+                <div><label for="eventTitle"> Title: </label><input type ="text" id="eventTitle" name="eventTitle"></div>
+                <div><label for="completionDate"> Date: </label><input type="date" id = "completionDate" name="completionDate" min="<?php echo $date; ?>"></div>
+                <div><label for="description"> Description: </label><textarea id="description" name="description" form="event"></textarea></div> 
+                <div><input type="submit" value="Create Event"></div>
             </form>
                             
         <?php } ?>
