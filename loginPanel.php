@@ -44,4 +44,11 @@
     </div>
     <div class="button" id="Cancel"> Cancel </div>
     </div>
+    <?php if (isset($_SESSION['username'])) { ?>
+        <div id="logout"> 
+            <form action="logoutHandler.php" enctype="multipart/form-data">
+                <input type="submit" value="Logout">
+            </form>
+        </div>
+    <?php } ?>
 </div>
