@@ -72,6 +72,11 @@ div#mainBox{
     display:inline-block;
     width: 150px;
     text-align:right;
+    padding: 5px;
+}
+
+#createEvent .input{
+    width: 150px;
 }
 
 div#sidebar{

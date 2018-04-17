@@ -41,13 +41,13 @@
                         <?php
                             echo"Title:        ";
                         ?>
-                    </label><input type ="text" id="eventTitle" name="eventTitle"></div>
+                    </label><input class="input" type="text" id="eventTitle" name="eventTitle"></div>
                     
                     <div> <label for="completionDate"> 
                         <?php 
                             echo "Date:        ";
                         ?>
-                    </label><input type="date" id = "completionDate" name="completionDate" min="<?php echo $date; ?>"></div>
+                    </label><input class="input" type="date" id = "completionDate" name="completionDate" min="<?php echo $date; ?>"></div>
                     
                     <div><label for="description"> 
                         <?php
