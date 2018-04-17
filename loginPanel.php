@@ -47,7 +47,7 @@
     <?php if (!isset($_SESSION['username'])){ ?>
     <div id="logout" class="button" <?php echo "style=\"display: none;\"";} ?> > 
         <form action="logoutHandler.php" enctype="multipart/form-data">
-        <div><input></div>
+        <input type="submit"> Logout
         </form>
     </div>
 </div>
