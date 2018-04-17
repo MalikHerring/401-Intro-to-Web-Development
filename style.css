@@ -110,7 +110,7 @@ ul#horizontal-menu {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #07070A;
+    vel
 }
 
 ul#horizontal-menu li{
@@ -127,6 +127,10 @@ ul#horizontal-menu li a{
 
 li a:hover{
     background-color: #4A525A;
+}
+
+#currentPage{
+    background-color: #004BA8;
 }
 
 body{

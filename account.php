@@ -3,6 +3,7 @@
     require_once 'Dao.php';
     $dao = new Dao();
     include("header.php");
+    $thisPage = "account";
 ?>
 
         <div id="mainBox">

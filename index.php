@@ -7,6 +7,7 @@
         $username = $_SESSION['username'];
     }
     include("header.php");
+    $thisPage = "index";
 ?>
     <div id="mainBox">
         <h2> Current Account List </h2>

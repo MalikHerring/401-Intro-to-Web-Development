@@ -7,6 +7,7 @@
         $username = $_SESSION['username'];
     }
     include("header.php");
+    $thisPage = "schedule";
 ?>
 
     <div id="mainBox">

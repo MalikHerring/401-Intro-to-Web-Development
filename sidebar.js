@@ -21,11 +21,6 @@ $(document).ready(function() {
         $("div.button").show();
         $("#Cancel").hide();
     });
-
-    $("ul#horizontal-menu li a").click(function(){
-	$("ul#horizontal-menu li a").css("background-color", "#07070A");
-	$(this).css("background-color", "#004BA8");
-    });
 });
 
 
