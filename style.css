@@ -85,6 +85,8 @@ div#sidebar{
     border-color: black;
     float: right;
     padding: 5px;
+    display:table-cell;
+    vertical-align:middle;
 }
 
 div.Login{
