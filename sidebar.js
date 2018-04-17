@@ -4,13 +4,13 @@ $(document).ready(function() {
     $("#Cancel").hide();
 });
 
-$("#loginButton").click(function(){
+$("div#loginButton.button").click(function(){
    $("#Login").show();
    $(".button").hide();
    $("#Cancel").show();
 });
 
-$("#createButton").click(function(){
+$("div#createButton.button").click(function(){
    $("#CreateAccount").show();
    $(".button").hide();
    $("#Cancel").show();
