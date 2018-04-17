@@ -13,7 +13,7 @@
   background-color:#228B22;
 }
 
-div.button{
+button{
     background-color:#004BA8;
     color:#FFF;
     width:150px;
@@ -26,7 +26,7 @@ div.button{
     display: block;
 }
 
-div.button:hover{
+button:hover{
     background-color:#50A2A7;
     cursor: pointer;
 }
