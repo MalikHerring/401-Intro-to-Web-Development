@@ -53,8 +53,8 @@ div.button:hover{
 }
 
 div#header {
-    height:100px;
-    min-width:800px;
+    height:150px;
+    min-width:810px;
     border-style: dashed;
     border-width: 2px;
     border-color: black;    
@@ -86,19 +86,6 @@ div#sidebar{
     float: right;
     display: block;
     vertical-align: middle;
-}
-
-div.centerMiddle{
-    top: 25%;
-    vertical-align: middle;
-}
-
-div.Login{
-    visibility: visible;
-}
-
-div.CreateAccount{
-    visibility: visible;
 }
 
 div#footer{
@@ -146,7 +133,7 @@ li a:hover{
 
 body{
     font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
-    min-width: 1100px;
+    min-width: 810px;
 }
 
 table, th, td {

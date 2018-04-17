@@ -5,7 +5,6 @@
 ?>
 
 <div id="sidebar">
-    <div class="centerMiddle">
     <?php
         if (isset($_SESSION['messages'])){
             $validity = $_SESSION['validity'];
@@ -43,5 +42,4 @@
         </form>    
     </div>
     <div class="button" id="Cancel"> Cancel </div>
-    </div>
 </div>

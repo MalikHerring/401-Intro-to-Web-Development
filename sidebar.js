@@ -18,8 +18,8 @@ $(document).ready(function() {
     $("div#Cancel.button").click(function(){
         $("#Login").hide();
         $("#CreateAccount").hide();
-        $("#Cancel").hide();
         $("div.button").show();
+        $("#Cancel").hide();
     });
 });
 
