@@ -89,7 +89,7 @@ div#sidebar{
 
 div.centerMiddle{
     top: 25%;
-    
+    vertical-align: middle;
 }
 
 div.Login{
