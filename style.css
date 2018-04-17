@@ -84,9 +84,11 @@ div#sidebar{
     border-width: 2px;
     border-color: black;
     float: right;
-    /*padding: 5px;*/
-    display: table-cell;
-    vertical-align:middle;
+    display: block;
+}
+
+div.centerMiddle{
+    margin: auto;
 }
 
 div.Login{
