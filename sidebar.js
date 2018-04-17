@@ -2,7 +2,6 @@ $(document).ready(function() {
     $("#Login").hide();
     $("#CreateAccount").hide();
     $("#Cancel").hide();
-    $("#logout").hide();
 
     $("div#loginButton.button").click(function(){
         $("#Login").show();
