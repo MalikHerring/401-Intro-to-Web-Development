@@ -3,6 +3,7 @@
         <title>Life Assistant</title>
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
         <script src="jquery-3.3.1.slim.js"></script>
         <script src="sidebar.js"></script>
     </head>

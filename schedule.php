@@ -6,8 +6,8 @@
     if (isset($_SESSION['username'])){
         $username = $_SESSION['username'];
     }
-    include("header.php");
     $thisPage = "schedule";
+    include("header.php");
 ?>
 
     <div id="mainBox">

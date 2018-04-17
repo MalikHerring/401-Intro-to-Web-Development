@@ -1,4 +1,5 @@
 <?php
+    $thisPage = "index";
     session_start();
     require_once 'Dao.php';
     $dao = new Dao();
@@ -7,7 +8,6 @@
         $username = $_SESSION['username'];
     }
     include("header.php");
-    $thisPage = "index";
 ?>
     <div id="mainBox">
         <h2> Current Account List </h2>
@@ -35,9 +35,9 @@
                 #$title = isset($presets['title']) ? $presets['title'] : '';
                 $date = date("Y-m-d"); ?>
             <form action="eventHandler.php" method="POST" enctype="multipart/form-data" id="event"> 
-                    <div> Title: <input type ="text" id="eventTitle" name="eventTitle"></div>
-                    <div> Date: <input type="date" name="completionDate" min="<?php $date ?>"></div>
-                    <div> Description: <textarea name="description" form="event"></textarea></div> 
+                    <div><label for="eventTitle"> Title: </label><input type ="text" id="eventTitle" name="eventTitle"></div>
+                    <div> <label for="completionDate"> Date </label><input type="date" id = "completionDate" name="completionDate" min="<?php echo $date; ?>"></div>
+                    <div><label for="description"> Description: </label><textarea id="description" name="description" form="event"></textarea></div> 
                     <div><input type="submit" value="Create Event"></div>
             </form>
                             

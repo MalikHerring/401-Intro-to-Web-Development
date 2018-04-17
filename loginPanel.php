@@ -44,4 +44,5 @@
     </div>
     <div class="button" id="Cancel"> Cancel </div>
     </div>
+    <div action="logout.php" type="submit" class="button" id="logout">Logout</div>
 </div>
