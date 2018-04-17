@@ -69,7 +69,7 @@ class Dao {
   public function getUser($username){
     $conn = $this->getConnection();
     $query = $conn->prepare("SELECT * FROM user WHERE username = :username");
-    $query->bindParam(':username', $username);
+    $query->bindParam(':username', $username);vel
     $query->execute();
     $results = $query->fetch(PDO::FETCH_ASSOC);
     $this->logger->logDebug(__FUNCTION__ . " " . print_r($results,1));
@@ -91,8 +91,8 @@ class Dao {
   public function checkAccess($username) {
     $conn = $this->getConnection();
     $query = $conn->prepare("SELECT * FROM user where username = :username AND access = :access");
-    $query->bindParam(":access", 1);
     $query->bindParam(":username", $username);
+    $query->bindParam(":access", "1");
     $query->execute();
     $results=$query->fetch(PDO::FETCH_ASSOC);
     if (is_array($results) && 0 < count($results)){
