@@ -15,6 +15,12 @@ $(document).ready(function() {
         $("#Cancel").show();
     });
 
+    $("div#Cancel.button").click(function(){
+        $("#Login").hide();
+        $("#CreateAccount").hide();
+        $("#Cancel").hide();
+        $("div.button").show();
+    });
 });
 
 
