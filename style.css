@@ -13,7 +13,7 @@
   background-color:#228B22;
 }
 
-.button{
+div.button{
     background-color:#004BA8;
     color:#FFF;
     width:150px;
@@ -25,7 +25,7 @@
     display: block;
 }
 
-.button:hover{
+div.button:hover{
     background-color:#50A2A7;
     cursor: pointer;
 }
@@ -40,11 +40,6 @@
     position:relative
 }
 
-#event{
-    float:left;
-    text-align:right;
-    min-width:200px;    
-}
 
 #logo {
     float: right;

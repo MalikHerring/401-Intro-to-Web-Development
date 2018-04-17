@@ -27,7 +27,6 @@
         ?>
         </table>
         
-        <div id="event">
         <?php
             $username = $_SESSION['username'];
             if (!isset($username)){
@@ -35,16 +34,29 @@
             } else {
                 #$title = isset($presets['title']) ? $presets['title'] : '';
                 $date = date("Y-m-d"); ?>
-            <div><h2> Create an Event! </h2><div>
+            <h2>Create an Event!</h2>
             <form action="eventHandler.php" method="POST" enctype="multipart/form-data" id="event"> 
-                <div><label for="eventTitle"> Title: </label><input type ="text" id="eventTitle" name="eventTitle"></div>
-                <div><label for="completionDate"> Date: </label><input type="date" id = "completionDate" name="completionDate" min="<?php echo $date; ?>"></div>
-                <div><label for="description"> Description: </label><textarea id="description" name="description" form="event"></textarea></div> 
-                <div><input type="submit" value="Create Event"></div>
+                    <div><label for="eventTitle"> 
+                        <?php
+                            echo"Title:        ";
+                        ?>
+                    </label><input type ="text" id="eventTitle" name="eventTitle"></div>
+                    
+                    <div> <label for="completionDate"> 
+                        <?php 
+                            echo "Date:        ";
+                        ?>
+                    </label><input type="date" id = "completionDate" name="completionDate" min="<?php echo $date; ?>"></div>
+                    
+                    <div><label for="description"> 
+                        <?php
+                            echo "Description: ";
+                        ?>
+                    </label><textarea id="description" name="description" form="event"></textarea></div> 
+                    <div><input type="submit" value="Create Event"></div>
             </form>
                             
         <?php } ?>
-        </div>
             
     </div>
     
