@@ -75,7 +75,7 @@ div#sidebar{
     min-height: 500px;
     float: right;
     display: table-cell;
-    vertical-align: center;
+    vertical-align: middle;
     background-color:#4A525A;
     color: #FFF;
 }
