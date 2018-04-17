@@ -46,13 +46,6 @@
     min-width:200px;    
 }
 
-input{
-    width:200px;
-    height:25px;
-    border-radius: 10px;
-    padding-bottom: 5px;
-}
-
 #logo {
     float: right;
     height: 20px;
