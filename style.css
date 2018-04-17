@@ -40,7 +40,11 @@
     position:relative
 }
 
-
+#event{
+    text-align:right;
+    min-width:200px;
+    
+}
 #logo {
     float: right;
     height: 20px;
