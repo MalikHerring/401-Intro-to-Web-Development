@@ -40,8 +40,8 @@
             <div><input placeholder="Password" type="password" id="password" name="password"></div>
             <div><input placeholder="Confirm Password" type="password" id="confirmPass" name="confirmPassword"></div>
             <div><input type="submit" value="Create User"></div>
-        </form>
-    <div class="button" id="Cancel"> Cancel </div>    
+        </form>    
     </div>
+    <div class="button" id="Cancel"> Cancel </div>
     </div>
 </div>

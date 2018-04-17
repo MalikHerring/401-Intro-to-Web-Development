@@ -85,11 +85,11 @@ div#sidebar{
     border-color: black;
     float: right;
     display: block;
-    position: relative;
 }
 
 div.centerMiddle{
-    margin: auto;
+    top: 25%;
+    
 }
 
 div.Login{
