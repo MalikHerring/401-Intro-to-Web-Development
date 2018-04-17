@@ -78,6 +78,7 @@ div#sidebar{
     vertical-align: middle;
     background-color:#4A525A;
     color: #FFF;
+    padding: 5px;
 }
 
 div#loginContent{
