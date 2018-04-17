@@ -1,9 +1,9 @@
-$(document).ready(function() {
+/*$(document).ready(function() {
     $("#Login").hide();
     $("#CreateAccount").hide();
     $("#Cancel").hide();
 });
-
+*/
 $("div#loginButton.button").click(function(){
    $("#Login").show();
    $(".button").hide();
