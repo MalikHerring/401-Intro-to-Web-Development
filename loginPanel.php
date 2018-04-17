@@ -44,11 +44,10 @@
     </div>
     <div class="button" id="Cancel"> Cancel </div>
     </div>
-    <div>
+    <?php if (!isset($_SESSION['username'])){ ?>
+    <div id="logout" class="button" <?php echo "style=\"display: none;\"";} ?> > 
         <form action="logoutHandler.php" enctype="multipart/form-data">
-            <?php if (!isset($_SESSION['username'])){ ?>
-            <input id="logout" <?php echo "style=\"display: none;\"";} ?> class="button"> Logout </input>
+        <div><input></div>
         </form>
-    </div>
     </div>
 </div>
