@@ -61,6 +61,7 @@ div#menubar {
 
 div#mainBox{
     background-color:#4A525A;
+    color: #FFF;
     min-width: 600px;
     width: 69%;
     min-height: 500px;
@@ -74,7 +75,13 @@ div#sidebar{
     min-height: 500px;
     float: right;
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: center;
+    background-color:#4A525A;
+    color: #FFF;
+}
+
+div#loginContent{
+    display:inline-block;
 }
 
 div#footer{
