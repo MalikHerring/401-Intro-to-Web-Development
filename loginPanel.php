@@ -26,18 +26,18 @@
     <div class="button" id="loginButton"> Login </div>
     <div id="Login">
         <form action="loginHandler.php" method="POST" enctype="multipart/form-data">
-            <div><label for="username"> Username: <input value="<?php echo isset($presets['username']) ? $presets['username'] : ''; ?>" type="text" id="username" name="username"></div>
-            <div><label for="password"> Password: </label><input type="password" id="password" name="password"></div>
+            <div><input value="<?php echo isset($presets['username']) ? $presets['username'] : ''; ?>" placeholder="Username" type="text" id="username" name="username"></div>
+            <div><input placeholder="Password" type="password" id="password" name="password"></div>
             <div><input type="submit" value="Login"></div>
         </form>
     </div>
     <div class="button" id="createButton"> Create Account </div>
     <div id="CreateAccount">
         <form action="createHandler.php" method="POST" enctype="multipart/form-data">
-            <div><label for="username"> Username: </label><input value="<?php echo isset($presets['username']) ? $presets['username'] : ''; ?>" type="text" id="username" name="username"></div>
-            <div><label for="email"> Email: </label><input value="<?php echo isset($presets['email']) ? $presets['email'] : ''; ?>" type="email" id="email" name="email"></div>
-            <div><label for="password"> Password: </label><input type="password" id="password" name="password"></div>
-            <div><label for="confirmPass">Confirm Password:</label><input type="password" id="confirmPass" name="confirmPassword"></div>
+            <div><input placeholder="Username" value="<?php echo isset($presets['username']) ? $presets['username'] : ''; ?>" type="text" id="username" name="username"></div>
+            <div><input placeholder="Email" value="<?php echo isset($presets['email']) ? $presets['email'] : ''; ?>" type="email" id="email" name="email"></div>
+            <div><input placeholder="Password" type="password" id="password" name="password"></div>
+            <div><input placeholder="Confirm Password" type="password" id="confirmPass" name="confirmPassword"></div>
             <div><input type="submit" value="Create User"></div>
         </form>
     </div>            
