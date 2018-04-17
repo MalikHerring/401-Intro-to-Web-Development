@@ -23,7 +23,6 @@
         unset($_SESSION['messages']);
         unset($_SESSION['messages']);
     ?>
-    <script src="sidebar.js"></script>
     <div class="button" id="loginButton"> Login </div>
     <div id="Login">
         <form action="loginHandler.php" method="POST" enctype="multipart/form-data">

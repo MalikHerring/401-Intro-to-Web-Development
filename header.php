@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
         <script src="jquery-3.3.1.slim.js"></script>
-        <script src="sidebar.js"></script>
+        <!--<script src="sidebar.js"></script>-->
     </head>
     <body>
     <div id = content>
