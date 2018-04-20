@@ -146,10 +146,6 @@ ul#horizontal-menu li a{
 }
 
 ul#horizontal-menu li#login a{
-    background-color:#004BA8;
-}
-
-ul#horizontal-menu li#signup a{
     background-color:#50A2A7;
 }
 
