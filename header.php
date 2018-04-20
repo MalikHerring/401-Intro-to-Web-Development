@@ -18,5 +18,7 @@
                 <li<?php if ($thisPage == "index") { echo " id =\"currentPage\"";}?>><a href="index.php" alt="Home">Home</a></li>
                 <li<?php if ($thisPage == "schedule") { echo " id =\"currentPage\"";}?>><a href="schedule.php" alt="Schedule">Schedule</a></li>
                 <li<?php if ($thisPage == "account") { echo " id =\"currentPage\"";}?>><a href="account.php" alt="Account">Account</a></li>
+                <li id="login"><a href="login.php" alt="Login">Login</a></li>
+                <li id="signup"><a href="login.php" alt="Sign-up">Sign-up</a></li>
             </ul>
         </div>

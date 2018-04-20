@@ -128,12 +128,29 @@ ul#horizontal-menu li{
     float: left;
 }
 
+ul#horizontal-menu li#login{
+    float: right;
+}
+
+ul#horizontal-menu li#signup{
+    float:right;
+}
+
+
 ul#horizontal-menu li a{
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+}
+
+ul#horizontal-menu li#login a{
+    background-color:#004BA8;
+}
+
+ul#horizontal-menu li#signup a{
+    background-color:#50A2A7;
 }
 
 li a:hover{
