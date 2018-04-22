@@ -1,12 +1,5 @@
 <?php
     $thisPage = "index";
-    session_start();
-    require_once 'Dao.php';
-    $dao = new Dao();
-    $username;
-    if (isset($_SESSION['username'])){
-        $username = $_SESSION['username'];
-    }
     include("header.php");
 ?>
     <div id="mainBox">

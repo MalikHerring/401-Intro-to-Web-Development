@@ -1,8 +1,5 @@
 <?php
     $thisPage = "account";
-    session_start();
-    require_once 'Dao.php';
-    $dao = new Dao();
     include("header.php");
 ?>
 
