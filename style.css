@@ -14,17 +14,19 @@
 }
 
 div#buttons{
-    margin: 2 auto;
-    overflow: hidden;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom: 5px;
+    margin-top:10px;
     text-align:center;
-    width:50%;
+    overflow: hidden;
 }
 
 div.button{
     background-color:#004BA8;
     float:left;
     color:#FFF;
-    width:50%;
+    width:150px;
     text-align:center;
     padding: 20px 5px;    
 }
