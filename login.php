@@ -25,7 +25,7 @@
         <div id="buttons">
             <div class="button" id="loginButton"> Login </div>
             <div class="button" id="createButton"> Sign-Up </div>
-        <div>
+        </div>
         <div id="Login">
             <form action="loginHandler.php" method="POST" enctype="multipart/form-data">
                 <div><input value="<?php echo isset($presets['username']) ? $presets['username'] : ''; ?>" placeholder="Username" type="text" id="username" name="username"></div>
