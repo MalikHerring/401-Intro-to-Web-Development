@@ -119,11 +119,11 @@ ul#horizontal-menu li a#logo{
     color: #50A2A7;
 }
 
-ul#horizontal-menu li#login{
+ul#horizontal-menu li.login{
     float: right;
 }
 
-ul#horizontal-menu li#signup{
+ul#horizontal-menu li.signup{
     float:right;
 }
 
@@ -136,7 +136,7 @@ ul#horizontal-menu li a{
     text-decoration: none;
 }
 
-ul#horizontal-menu li#login a{
+ul#horizontal-menu li.login a{
     background-color:#50A2A7;
 }
 
