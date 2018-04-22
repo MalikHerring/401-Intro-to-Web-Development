@@ -30,11 +30,11 @@
             break;
         }
     }
-    if ($dao->doesUserExist($email, $username){
+/*   if ($dao->doesUserExist($email, $username){
         $messages[] = "Email or username already in use";
         $valid = false;
     }
-        
+*/        
     if (strlen($username) > 16){
         $messages[] = "Username cannot be more than 16 characters long";
         $valid = false;
