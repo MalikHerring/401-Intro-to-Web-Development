@@ -23,7 +23,7 @@
         <?php
             $username = $_SESSION['username'];
             if (!isset($username)){
-                echo "<h2> Please Log in or create an Account on the righthand side</h2>";
+                echo "<h2> Please Log in or create an Account</h2>";
             } else {
                 #$title = isset($presets['title']) ? $presets['title'] : '';
                 $date = date("Y-m-d"); ?>
