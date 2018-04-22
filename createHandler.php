@@ -16,8 +16,22 @@
     if (empty($username)){
         $messages[] = "Please provide a username.";
         $valid = false;
-    } elseif ($dao->doesUserExist(null, $username){
-        $messages[] = "Username already taken.";
+    }
+        $users = $dao->getUsers();
+    foreach($users as $user){
+        if(strcmp($user['username'], $username) == 0){
+            $messages[] = "Username already taken, Please provide a username";
+            $valid = false;
+            break;
+        } 
+        if (strcmp($user['email'], $email) == 0) {
+            $messages[] = "Email is already in use, please provide a different email";
+            $valid = false;
+            break;
+        }
+    }
+    if ($dao->doesUserExist($email, $username){
+        $messages[] = "Email or username already in use";
         $valid = false;
     }
         
@@ -29,9 +43,6 @@
     if(empty($email)){
         $messages[] = "Please provide an email";
         $valid = false;
-    } elseif ($dao->doesUserExist($email, null) {
-        $messages[] = "Email already in Use.";
-        $valid = false;
     }
     
     if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
@@ -42,10 +53,12 @@
     if(empty($password)){
         $messages[] = "Please provide a password";
         $valid = false;
-    } elseif (strlen($password) < 6){
+    }
+    if (strlen($password) < 6){
         $messages[] = "Please provide a password longer than 6 characters";
         $valid = false;
-    } elseif (!$dao->verifyPassword($password)){
+    }
+    if (!$dao->verifyPassword($password)){
         $messages[] = "Password must contain a capital, lowercase, and number characters";
         $valid = false;
     }
