@@ -13,18 +13,11 @@
   background-color:#228B22;
 }
 
-div#buttons{
-    margin: 2 auto;
-    text-align:center;
-    overflow: hidden;
-    width: 100%;
-}
-
 div.button{
     background-color:#004BA8;
-    float:left;
+    margin: 2 auto;
     color:#FFF;
-    width:50%;
+    width:150px;
     text-align:center;
     padding: 20px 5px;    
 }
