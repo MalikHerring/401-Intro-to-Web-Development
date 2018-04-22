@@ -38,9 +38,9 @@ class Dao {
   
   public function doesUserExist($email, $username){
     $conn = $this->getConnection();
-    $query = $conn->prepare("SELECT * FROM user where email = :email OR username = :username");
-    $query->bindParam(":email", $email);
-    $query->bindParam(":username", $username);
+    $query = $conn->prepare("SELECT * FROM user where username = :username OR email = :email");
+    $query->bindParam(':email', $email);
+    $query->bindParam(':username', $username);
     $query->execute();
     $results=$query->fetch(PDO::FETCH_ASSOC);
     if (is_array($results) && 0 < count($results)){
@@ -55,8 +55,8 @@ class Dao {
     $password=md5($password . $salt);
     $conn = $this->getConnection();
     $query = $conn->prepare("SELECT * FROM user where username = :username AND password = :password");
-    $query->bindParam(":username", $username);
-    $query->bindParam(":password", $password);
+    $query->bindParam(':username', $username);
+    $query->bindParam(':password', $password);
     $query->execute();
     $results=$query->fetch(PDO::FETCH_ASSOC);
     if (is_array($results) && 0 < count($results)){
@@ -91,7 +91,7 @@ class Dao {
   public function checkAccess($username) {
     $conn = $this->getConnection();
     $query = $conn->prepare("SELECT * FROM user where username = :username AND access = '1'");
-    $query->bindParam(":username", $username);
+    $query->bindParam(':username', $username);
     $query->execute();
     $results=$query->fetch(PDO::FETCH_ASSOC);
     if (is_array($results) && 0 < count($results)){
