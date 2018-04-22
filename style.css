@@ -145,6 +145,9 @@ li a:hover{
 body{
     font-family:'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif;
     min-width: 810px;
+    max-width: 1350px;
+    margin-left: auto;
+    margin-right: auto;
     overflow: hidden;
 }
 
