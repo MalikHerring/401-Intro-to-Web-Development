@@ -1,13 +1,9 @@
 <?php
-    session_start();
-    require_once 'Dao.php';
-    $dao=new Dao();
     include("header.php");
-    if ($dao->checkAccess($_SESSION['username')) {    
+    if ($dao->checkAccess($username)) {    
         phpinfo();
     } else {
-        header("Location: index.php");
-        exit;
+        echo "<h1> You do not have admin priviledges! </h1>"; 
     }
     include("footer.php");
 ?>
