@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Life Assistant</title>
+        <title>Track - Life Assistant</title>
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
         <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
