@@ -13,33 +13,13 @@
     $valid = true;
     $messages = array();
     
-    if (empty(username)){
+    if (empty($username)){
         $messages[] = "Please provide a username.";
         $valid = false;
+    } elseif ($dao->doesUserExist(null, $username){
+        $messages[] = "Username already taken.";
+        $valid = false;
     }
-        $users = $dao->getUsers();
-    foreach($users as $user){
-        if(strcmp($user['username'], $username) == 0){
-            $messages[] = "Username already taken, Please provide a username";
-            $valid = false;
-            break;
-        } 
-        if (strcmp($user['email'], $email) == 0) {
-            $messages[] = "Email is already in use, please provide a different email";
-            $valid = false;
-            break;
-        }
-    }
- #   if ($username == $user['username']){
- #       $messages[] = "Username already taken, Please provide a username";
- #       $valid = false;
- #   } else {
- #       $messages[] = "it made it here";
- #       $messages[] = $username . "<- username";
- #       $messages[] = $user['username'] . "<- user username";
- #       $messages[] = $user;
- #       $valid = false;
- #   }
         
     if (strlen($username) > 16){
         $messages[] = "Username cannot be more than 16 characters long";
@@ -48,6 +28,9 @@
     
     if(empty($email)){
         $messages[] = "Please provide an email";
+        $valid = false;
+    } elseif ($dao->doesUserExist($email, null) {
+        $messages[] = "Email already in Use.";
         $valid = false;
     }
     
@@ -59,12 +42,10 @@
     if(empty($password)){
         $messages[] = "Please provide a password";
         $valid = false;
-    }
-    if (strlen($password) < 6){
+    } elseif (strlen($password) < 6){
         $messages[] = "Please provide a password longer than 6 characters";
         $valid = false;
-    }
-    if (!$dao->verifyPassword($password)){
+    } elseif (!$dao->verifyPassword($password)){
         $messages[] = "Password must contain a capital, lowercase, and number characters";
         $valid = false;
     }
