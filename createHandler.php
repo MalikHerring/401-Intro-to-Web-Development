@@ -54,12 +54,10 @@
     if(!$valid){
         $_SESSION['validity'] = "invalid";
         $_SESSION['messages'] = $messages;
-        header("Location: index.php");
+        header("Location: login.php");
         exit;
     }
     
-    $_SESSION['validity'] = "valid";
-    $_SESSION['messages'] = array("Thank you for creating an account");
     $_SESSION['username'] = $username;
     
     $dao->saveUser($username, $email, $password);
