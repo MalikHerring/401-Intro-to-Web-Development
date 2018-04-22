@@ -40,20 +40,6 @@ div.button:hover{
     position:relative
 }
 
-
-#logo {
-    float: right;
-    height: 20px;
-    width: 100px;
-    padding-right: 10px;
-    padding-top: 10px;
-}
-
-div#header {
-    height:150px;
-    min-width:810px;   
-}
-
 div#menubar {
     min-width: 500px;
     padding-bottom: 10px;
@@ -126,6 +112,11 @@ ul#horizontal-menu {
 
 ul#horizontal-menu li{
     float: left;
+}
+
+ul#horizontal-menu li a#logo{
+    font-family:'Gugi', cursive;
+    color: #50A2A7;
 }
 
 ul#horizontal-menu li#login{
