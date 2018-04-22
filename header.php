@@ -16,7 +16,7 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
         <script src="jquery-3.3.1.slim.js"></script>
-        <script src="sidebar.js"></script>
+        <script src="interaction.js"></script>
     </head>
     <body>
     <div id = content>

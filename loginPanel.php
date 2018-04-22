@@ -1,8 +1,3 @@
-<?php
-    session_start();
-    require_once 'Dao.php';
-    $dao = new Dao();
-?>
 
 <div id="sidebar">
     <div id="loginContent">
@@ -42,13 +37,5 @@
             <div><input type="submit" value="Create User"></div>
         </form>    
     </div>
-    <div class="button" id="Cancel"> Cancel </div>
     </div>
-    <?php if (isset($_SESSION['username'])) { ?>
-        <div id="logout"> 
-            <form action="logoutHandler.php" enctype="multipart/form-data">
-                <input type="submit" value="Logout">
-            </form>
-        </div>
-    <?php } ?>
 </div>

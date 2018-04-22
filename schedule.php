@@ -8,6 +8,5 @@
     </div>
     
 <?php
-    include("loginPanel.php");
     include("footer.php");
 ?>
