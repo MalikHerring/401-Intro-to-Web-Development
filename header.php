@@ -22,7 +22,7 @@
     <div id = content>
         <div id="menubar">
             <ul id="horizontal-menu" id="menuText">
-                <li><a id="logo" href="index.php" alt="Logo"><h2>TRACK</h2> </a> </li>
+                <li><a id="logo" href="index.php" alt="Logo"> TRACK </a> </li>
                 <li<?php if ($thisPage == "index") { echo " id =\"currentPage\"";}?>><a href="index.php" alt="Home">Home</a></li>
                 <li<?php if ($thisPage == "schedule") { echo " id =\"currentPage\"";}?>><a href="schedule.php" alt="Schedule">Schedule</a></li>
                 <li<?php if ($thisPage == "account") { echo " id =\"currentPage\"";}?>><a href="account.php" alt="Account">Account</a></li>

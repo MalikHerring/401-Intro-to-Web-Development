@@ -117,7 +117,8 @@ ul#horizontal-menu li{
 ul#horizontal-menu li a#logo{
     font-family:'Gugi', cursive;
     color: #50A2A7;
-    padding: 1px;
+    padding: 2px 16px;
+    font-size: 150%;
 }
 
 ul#horizontal-menu li.login{

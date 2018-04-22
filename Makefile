@@ -17,6 +17,6 @@ openFiles:
 
 push:
 	git add .
-	git commit -m "This is testing"
+	git commit -m "Quick Makefile push for testing or aesthetic reasons"
 	git push heroku master
 
