@@ -28,7 +28,6 @@ div#buttons{
     margin-left:auto;
     margin-right:auto;
     overflow:hidden;
-    
 }
 
 div.button:hover{
@@ -71,6 +70,11 @@ div#loginContent{
     width: 50%;
     padding: 10px;
     text-align: center;
+}
+
+input {
+    margin-top: 3px;
+    margin-bottom: 3px;
 }
 
 div#footer{
