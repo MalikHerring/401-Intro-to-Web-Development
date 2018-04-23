@@ -54,6 +54,12 @@ div#mainBox{
     float: left;
 }
 
+div#eventsToday{
+    float:right;
+    display:inline-block;
+    padding: 5px;
+}
+
 #createEvent label{
     display:inline-block;
     width: 150px;

@@ -34,7 +34,7 @@
                         <?php
                             echo"Title:        ";
                         ?>
-                    </label><input class="input" type="text" id="eventTitle" name="eventTitle"></div>
+                    </label><input class="input" type="text" id="title" name="eventTitle"></div>
                     
                     <div> <label for="completionDate"> 
                         <?php 
@@ -51,7 +51,7 @@
             </form>
             </div>
                             
-        <?php } ?>
+        <?php include("events.php"); } ?>
             
     </div>
     
