@@ -20,7 +20,7 @@ div.button{
     width:150px;
     text-align:center;
     padding: 20px 5px;
-/*     float: left; */
+    float: left;
 }
 
 div#buttons{
