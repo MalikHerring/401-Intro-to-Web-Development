@@ -25,10 +25,10 @@
                 <li><a id="logo" href="index.php" alt="Logo"> TRACK </a></li>
                 <li<?php if ($thisPage == "index") { echo " id =\"currentPage\"";}?>><a href="index.php" alt="Home">Home</a></li>
                 <li<?php if ($thisPage == "schedule") { echo " id =\"currentPage\"";}?>><a href="schedule.php" alt="Schedule">Schedule</a></li>
-                <li<?php if ($thisPage == "account") { echo " id =\"currentPage\"";}?>><a href="account.php" alt="Account">Account</a></li>
+                <?php if(isset($username)){ ?>
+                <li<?php if ($thisPage == "account") { echo " id =\"currentPage\"";}?>><a href="account.php" alt="Account">Account</a></li>                
                 <?php if($dao->checkAccess($username)){ ?>
                     <li><a href="phpInfo.php" alt="PHP Info">PHP Info</a></li> <?php } ?>
-                <?php if(isset($username)){ ?>
                 <li class="signup" id="logout"><a href="logoutHandler.php" alt="logout">Logout</a></li>
                 <li class="login" id="username"><a href="account.php" alt="<?php echo $username; ?>"><?php echo $username;?></a></li>
                 <?php } else { ?>
