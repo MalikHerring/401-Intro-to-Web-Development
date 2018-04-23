@@ -20,13 +20,14 @@ div.button{
     width:150px;
     text-align:center;
     padding: 20px 5px;
-    float: left;
+/*     float: left; */
 }
 
 div#buttons{
     display:inline-block;
     margin-left:auto;
     margin-right:auto;
+    overflow:hidden;
     
 }
 
