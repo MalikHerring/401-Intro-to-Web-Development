@@ -42,7 +42,7 @@
                 <div><input type="submit" value="Create User"></div>
             </form>    
         </div>
-    <div>
+    </div>
 <?php
     include ("footer.php");
 ?>
